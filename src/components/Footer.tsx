@@ -1,10 +1,25 @@
-import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    
+    if (path === "#home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.querySelector(path);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
-    <footer className="bg-secondary border-t">
+    <footer className="bg-card/50 border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
@@ -15,17 +30,17 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
-              <li><Link to="/portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">Portfolio</Link></li>
+              <li><a href="#home" onClick={(e) => handleNavClick(e, "#home")} className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</a></li>
+              <li><a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="#services" onClick={(e) => handleNavClick(e, "#services")} className="text-sm text-muted-foreground hover:text-primary transition-colors">Services</a></li>
+              <li><a href="#portfolio" onClick={(e) => handleNavClick(e, "#portfolio")} className="text-sm text-muted-foreground hover:text-primary transition-colors">Portfolio</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
+            <h3 className="font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">Data Migration</li>
               <li className="text-sm text-muted-foreground">Database Optimization</li>
@@ -35,7 +50,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4 text-white">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail size={16} />
@@ -61,7 +76,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
+        <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} NexServ Consulting Inc. All rights reserved.</p>
         </div>
       </div>
