@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { 
   Database, Cloud, RefreshCw, Zap, FileSpreadsheet, Server,
   Target, Users, Lightbulb, Award, Building2, ShoppingCart, Heart, Landmark,
@@ -18,9 +19,7 @@ import servicesImage from "@/assets/services-infrastructure.jpg";
 import portfolioImage from "@/assets/portfolio-migration.jpg";
 import blogImage from "@/assets/blog-insights.jpg";
 import contactImage from "@/assets/contact-office.jpg";
-import blogAzureMigration from "@/assets/blog-azure-migration.jpg";
-import blogSqlOptimization from "@/assets/blog-sql-optimization.jpg";
-import blogDataMigration from "@/assets/blog-data-migration.jpg";
+import { blogPosts } from "@/data/blogPosts";
 
 const Index = () => {
   const { toast } = useToast();
@@ -144,32 +143,8 @@ const Index = () => {
     },
   ];
 
-  const posts = [
-    {
-      title: "Best Practices for Database Migration to Azure SQL",
-      excerpt: "Learn essential strategies for a successful database migration to Azure SQL.",
-      category: "Cloud Solutions",
-      date: "2024-01-15",
-      readTime: "8 min read",
-      image: blogAzureMigration,
-    },
-    {
-      title: "Optimizing SQL Server Performance: A Complete Guide",
-      excerpt: "Discover proven techniques to enhance your SQL Server performance.",
-      category: "Database Optimization",
-      date: "2024-01-10",
-      readTime: "12 min read",
-      image: blogSqlOptimization,
-    },
-    {
-      title: "Data Migration Strategies for Enterprise Systems",
-      excerpt: "Explore different approaches to enterprise data migration.",
-      category: "Data Migration",
-      date: "2024-01-05",
-      readTime: "10 min read",
-      image: blogDataMigration,
-    },
-  ];
+  // Show only the latest 3 blog posts
+  const posts = blogPosts.slice(0, 3);
 
   return (
     <div className="min-h-screen">
@@ -378,6 +353,16 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          {/* View All Insights Button */}
+          <div className="text-center mt-12">
+            <Link to="/blog">
+              <Button size="lg" variant="outline">
+                View All Insights
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

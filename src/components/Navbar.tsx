@@ -17,14 +17,20 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "#home" },
-    { name: "Company", path: "#about" },
-    { name: "Services", path: "#services" },
-    { name: "Work", path: "#portfolio" },
-    { name: "Blog", path: "#blog" },
+    { name: "Home", path: "#home", isRoute: false },
+    { name: "Company", path: "#about", isRoute: false },
+    { name: "Services", path: "#services", isRoute: false },
+    { name: "Work", path: "#portfolio", isRoute: false },
+    { name: "Blog", path: "/blog", isRoute: true },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isRoute: boolean) => {
+    if (isRoute) {
+      // Let React Router handle route navigation
+      setIsMobileMenuOpen(false);
+      return;
+    }
+    
     e.preventDefault();
     setIsMobileMenuOpen(false);
     
@@ -54,17 +60,28 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.path}
-                href={link.path}
-                onClick={(e) => handleNavClick(e, link.path)}
-                className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
-              >
-                {link.name}
-              </a>
-            ))}
-            <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
+            {navLinks.map((link) => 
+              link.isRoute ? (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.path}
+                  href={link.path}
+                  onClick={(e) => handleNavClick(e, link.path, link.isRoute)}
+                  className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
+                >
+                  {link.name}
+                </a>
+              )
+            )}
+            <a href="#contact" onClick={(e) => handleNavClick(e, "#contact", false)}>
               <Button>Contact</Button>
             </a>
           </div>
@@ -80,17 +97,28 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.path}
-                  href={link.path}
-                  onClick={(e) => handleNavClick(e, link.path)}
-                  className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
-                >
-                  {link.name}
-                </a>
-              ))}
-              <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
+              {navLinks.map((link) => 
+                link.isRoute ? (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    onClick={(e) => handleNavClick(e, link.path, link.isRoute)}
+                    className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
+                  >
+                    {link.name}
+                  </a>
+                )
+              )}
+              <a href="#contact" onClick={(e) => handleNavClick(e, "#contact", false)}>
                 <Button className="w-full">Contact</Button>
               </a>
             </div>
