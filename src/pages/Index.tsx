@@ -5,10 +5,28 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { 
-  Database, Cloud, RefreshCw, Zap, FileSpreadsheet, Server,
-  Target, Users, Lightbulb, Award, Building2, ShoppingCart, Heart, Landmark,
-  Calendar, Clock, ArrowRight, Mail, Phone, MapPin, CheckCircle
+import {
+  Database,
+  Cloud,
+  RefreshCw,
+  Zap,
+  FileSpreadsheet,
+  Server,
+  Target,
+  Users,
+  Lightbulb,
+  Award,
+  Building2,
+  ShoppingCart,
+  Heart,
+  Landmark,
+  Calendar,
+  Clock,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  CheckCircle,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -118,14 +136,16 @@ const Index = () => {
       icon: Building2,
       title: "Enterprise Data Migration",
       client: "Fortune 500 Manufacturing Company",
-      description: "Migrated 10+ years of legacy data from multiple Access databases to Azure SQL, improving query performance by 400%.",
+      description:
+        "Migrated 10+ years of legacy data from multiple Access databases to Azure SQL, improving query performance by 400%.",
       technologies: ["MS Access", "Azure SQL", "SSIS", "PowerBI"],
     },
     {
       icon: ShoppingCart,
       title: "E-commerce Database Optimization",
       client: "Leading Retail Chain",
-      description: "Optimized SQL Server database handling 1M+ daily transactions, significantly reducing response times.",
+      description:
+        "Optimized SQL Server database handling 1M+ daily transactions, significantly reducing response times.",
       technologies: ["SQL Server", "Index Optimization", "Query Tuning"],
     },
     {
@@ -149,7 +169,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <SEO 
+      <SEO
         title="Data Migration & Database Optimization Services"
         description="Recently founded by industry veterans with 20+ years of experience. Expert data migration, database optimization, and Azure SQL solutions. Transform your data infrastructure with NexServ Consulting's proven methodologies."
         keywords="data migration, database optimization, Azure SQL, SQL Server, SSIS, data conversion, cloud solutions, MS Access, Excel automation"
@@ -160,9 +180,9 @@ const Index = () => {
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-[hsl(192,60%,12%)] to-[hsl(220,50%,15%)]" />
         <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt="Data transformation and cloud computing" 
+          <img
+            src={heroImage}
+            alt="Data transformation and cloud computing"
             className="w-full h-full object-cover opacity-10"
           />
         </div>
@@ -192,7 +212,10 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section ref={statsSection.elementRef} className={`py-20 px-4 bg-card/50 transition-all duration-1000 ${statsSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <section
+        ref={statsSection.elementRef}
+        className={`py-20 px-4 bg-card/50 transition-all duration-1000 ${statsSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -211,30 +234,35 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section ref={aboutSection.elementRef} id="about" className={`py-32 px-4 transition-all duration-1000 ${aboutSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <section
+        ref={aboutSection.elementRef}
+        id="about"
+        className={`py-32 px-4 transition-all duration-1000 ${aboutSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">About NexServ Consulting</h2>
             <p className="text-xl text-muted-foreground">
-              We're a team of data experts passionate about helping businesses unlock the full potential of their data infrastructure.
+              We're a team of data experts passionate about helping businesses unlock the full potential of their data
+              infrastructure.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src={teamImage} 
-                alt="NexServ Consulting team collaborating" 
-                className="w-full h-full object-cover"
-              />
+              <img src={teamImage} alt="NexServ Consulting team collaborating" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white">Our Story</h3>
               <p className="text-muted-foreground text-lg">
-                Recently founded by industry veterans, NexServ Consulting brings decades of experience in data management to businesses across industries. We specialize in Microsoft technologies including Excel, MS Access, SQL Server, SSIS, and Azure SQL—combining deep technical expertise with fresh, innovative approaches.
+                Recently founded by industry veterans, NexServ Consulting brings decades of experience in data
+                management to businesses across industries. We specialize in Microsoft technologies including Excel, MS
+                Access, SQL Server, SSIS, and Azure SQL — combining deep technical expertise with fresh, innovative
+                approaches.
               </p>
               <p className="text-muted-foreground text-lg">
-                Today, we serve clients ranging from startups to Fortune 500 companies, helping them migrate, optimize, and manage their data infrastructure with confidence.
+                Today, we serve clients ranging from startups to Fortune 500 companies, helping them migrate, optimize,
+                and manage their data infrastructure with confidence.
               </p>
             </div>
           </div>
@@ -257,7 +285,11 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section ref={servicesSection.elementRef} id="services" className={`py-32 px-4 bg-card/30 transition-all duration-1000 ${servicesSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <section
+        ref={servicesSection.elementRef}
+        id="services"
+        className={`py-32 px-4 bg-card/30 transition-all duration-1000 ${servicesSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">Our Services</h2>
@@ -267,7 +299,10 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
+              <Card
+                key={index}
+                className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1"
+              >
                 <CardHeader>
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
                     <service.icon className="h-7 w-7 text-white" />
@@ -292,7 +327,11 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section ref={portfolioSection.elementRef} id="portfolio" className={`py-32 px-4 transition-all duration-1000 ${portfolioSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <section
+        ref={portfolioSection.elementRef}
+        id="portfolio"
+        className={`py-32 px-4 transition-all duration-1000 ${portfolioSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">Our Portfolio</h2>
@@ -302,7 +341,10 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all">
+              <Card
+                key={index}
+                className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all"
+              >
                 <CardHeader>
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
                     <project.icon className="h-7 w-7 text-white" />
@@ -314,7 +356,9 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, idx) => (
-                      <Badge key={idx} variant="secondary">{tech}</Badge>
+                      <Badge key={idx} variant="secondary">
+                        {tech}
+                      </Badge>
                     ))}
                   </div>
                 </CardContent>
@@ -325,25 +369,30 @@ const Index = () => {
       </section>
 
       {/* Blog Section */}
-      <section ref={blogSection.elementRef} id="blog" className={`py-32 px-4 bg-card/30 transition-all duration-1000 ${blogSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <section
+        ref={blogSection.elementRef}
+        id="blog"
+        className={`py-32 px-4 bg-card/30 transition-all duration-1000 ${blogSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">Latest Insights</h2>
-            <p className="text-xl text-muted-foreground">
-              Tips and best practices from our data experts.
-            </p>
+            <p className="text-xl text-muted-foreground">Tips and best practices from our data experts.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
-              <Card key={index} className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <Card
+                key={index}
+                className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              >
                 <div className="h-48 overflow-hidden">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                 </div>
                 <CardHeader>
-                  <Badge variant="secondary" className="w-fit mb-2">{post.category}</Badge>
-                  <CardTitle className="text-xl text-white">
-                    {post.title}
-                  </CardTitle>
+                  <Badge variant="secondary" className="w-fit mb-2">
+                    {post.category}
+                  </Badge>
+                  <CardTitle className="text-xl text-white">{post.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{post.excerpt}</p>
@@ -361,7 +410,7 @@ const Index = () => {
               </Card>
             ))}
           </div>
-          
+
           {/* View All Insights Button */}
           <div className="text-center mt-12">
             <Link to="/blog">
@@ -375,7 +424,11 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section ref={contactSection.elementRef} id="contact" className={`py-32 px-4 transition-all duration-1000 ${contactSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <section
+        ref={contactSection.elementRef}
+        id="contact"
+        className={`py-32 px-4 transition-all duration-1000 ${contactSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">Get in Touch</h2>
@@ -383,7 +436,7 @@ const Index = () => {
               Ready to transform your data infrastructure? Let's start a conversation.
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Contact Info */}
             <div className="space-y-6">
