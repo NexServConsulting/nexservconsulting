@@ -151,7 +151,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SEO 
         title="Data Migration & Database Optimization Services"
-        description="Expert data migration, database optimization, and Azure SQL solutions. Transform your data infrastructure with NexServ Consulting's proven methodologies and 20+ years of experience."
+        description="Recently founded by industry veterans with 20+ years of experience. Expert data migration, database optimization, and Azure SQL solutions. Transform your data infrastructure with NexServ Consulting's proven methodologies."
         keywords="data migration, database optimization, Azure SQL, SQL Server, SSIS, data conversion, cloud solutions, MS Access, Excel automation"
         canonical="/"
       />
@@ -231,7 +231,7 @@ const Index = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white">Our Story</h3>
               <p className="text-muted-foreground text-lg">
-                Founded with a vision to simplify complex data challenges, NexServ Consulting has grown into a trusted partner for businesses across industries. We specialize in Microsoft technologies including Excel, MS Access, SQL Server, SSIS, and Azure SQL.
+                Recently founded by industry veterans, NexServ Consulting brings decades of experience in data management to businesses across industries. We specialize in Microsoft technologies including Excel, MS Access, SQL Server, SSIS, and Azure SQL—combining deep technical expertise with fresh, innovative approaches.
               </p>
               <p className="text-muted-foreground text-lg">
                 Today, we serve clients ranging from startups to Fortune 500 companies, helping them migrate, optimize, and manage their data infrastructure with confidence.

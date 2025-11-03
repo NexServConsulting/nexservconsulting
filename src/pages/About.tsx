@@ -55,7 +55,7 @@ const About = () => {
               <h2 className="text-3xl font-bold">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded with a vision to simplify complex data challenges, NexServ Consulting has grown into a trusted partner for businesses across industries. Our journey began with a simple belief: that every organization deserves access to world-class data management solutions.
+                  Recently founded by industry veterans with a vision to simplify complex data challenges, NexServ Consulting brings decades of collective experience to every project. Our journey began with a simple belief: that every organization deserves access to world-class data management solutions, delivered with the agility of a modern firm and the wisdom of seasoned experts.
                 </p>
                 <p>
                   Today, we serve clients ranging from startups to Fortune 500 companies, helping them migrate, optimize, and manage their data infrastructure with confidence.
@@ -66,7 +66,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Our team of experts brings together decades of combined experience in database management, cloud solutions, and enterprise data architecture.
+                Our founding team of industry veterans brings together decades of combined experience in database management, cloud solutions, and enterprise data architecture—now channeled into a nimble, client-focused consultancy.
               </p>
               <p>
                 We specialize in Microsoft technologies including Excel, MS Access, SQL Server, SSIS, and Azure SQL, ensuring seamless integration with your existing ecosystem while preparing you for the future of data management.
