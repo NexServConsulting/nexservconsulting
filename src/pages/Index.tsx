@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server,
+  Database, Cloud, RefreshCw, Zap, FileSpreadsheet, Server,
   Target, Users, Lightbulb, Award, Building2, ShoppingCart, Heart, Landmark,
   Calendar, Clock, ArrowRight, Mail, Phone, MapPin, CheckCircle
 } from "lucide-react";
@@ -18,6 +18,9 @@ import servicesImage from "@/assets/services-infrastructure.jpg";
 import portfolioImage from "@/assets/portfolio-migration.jpg";
 import blogImage from "@/assets/blog-insights.jpg";
 import contactImage from "@/assets/contact-office.jpg";
+import blogAzureMigration from "@/assets/blog-azure-migration.jpg";
+import blogSqlOptimization from "@/assets/blog-sql-optimization.jpg";
+import blogDataMigration from "@/assets/blog-data-migration.jpg";
 
 const Index = () => {
   const { toast } = useToast();
@@ -62,7 +65,7 @@ const Index = () => {
       features: ["Format transformation", "Structure optimization", "Automated validation"],
     },
     {
-      icon: TrendingUp,
+      icon: Zap,
       title: "Database Optimization",
       description: "Enhance performance and efficiency of your database infrastructure.",
       features: ["Query optimization", "Index tuning", "Performance monitoring"],
@@ -148,7 +151,7 @@ const Index = () => {
       category: "Cloud Solutions",
       date: "2024-01-15",
       readTime: "8 min read",
-      gradient: "from-blue-500 to-cyan-500",
+      image: blogAzureMigration,
     },
     {
       title: "Optimizing SQL Server Performance: A Complete Guide",
@@ -156,7 +159,7 @@ const Index = () => {
       category: "Database Optimization",
       date: "2024-01-10",
       readTime: "12 min read",
-      gradient: "from-purple-500 to-pink-500",
+      image: blogSqlOptimization,
     },
     {
       title: "Data Migration Strategies for Enterprise Systems",
@@ -164,7 +167,7 @@ const Index = () => {
       category: "Data Migration",
       date: "2024-01-05",
       readTime: "10 min read",
-      gradient: "from-green-500 to-teal-500",
+      image: blogDataMigration,
     },
   ];
 
@@ -211,10 +214,10 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "500+", label: "Projects Completed" },
+              { value: "25+", label: "Projects Completed" },
               { value: "98%", label: "Client Satisfaction" },
-              { value: "50+", label: "Enterprise Clients" },
-              { value: "15+", label: "Years Experience" },
+              { value: "5+", label: "Enterprise Clients" },
+              { value: "20+", label: "Years Experience" },
             ].map((stat, index) => (
               <div key={index} className="text-center animate-fade-in">
                 <div className="text-5xl font-bold text-primary mb-2">{stat.value}</div>
@@ -351,7 +354,9 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
               <Card key={index} className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                <div className={`h-48 bg-gradient-to-br ${post.gradient} opacity-70`} />
+                <div className="h-48 overflow-hidden">
+                  <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+                </div>
                 <CardHeader>
                   <Badge variant="secondary" className="w-fit mb-2">{post.category}</Badge>
                   <CardTitle className="text-xl text-white">
