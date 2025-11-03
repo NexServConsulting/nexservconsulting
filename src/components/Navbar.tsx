@@ -18,9 +18,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "#home" },
-    { name: "About Us", path: "#about" },
+    { name: "Company", path: "#about" },
     { name: "Services", path: "#services" },
-    { name: "Portfolio", path: "#portfolio" },
+    { name: "Work", path: "#portfolio" },
     { name: "Blog", path: "#blog" },
   ];
 
@@ -59,13 +59,13 @@ const Navbar = () => {
                 key={link.path}
                 href={link.path}
                 onClick={(e) => handleNavClick(e, link.path)}
-                className="text-sm font-medium transition-colors hover:text-primary text-foreground/90"
+                className="text-base font-medium transition-colors hover:text-primary text-foreground/90"
               >
                 {link.name}
               </a>
             ))}
             <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
-              <Button>Contact Us</Button>
+              <Button>Contact</Button>
             </a>
           </div>
 
@@ -85,13 +85,13 @@ const Navbar = () => {
                   key={link.path}
                   href={link.path}
                   onClick={(e) => handleNavClick(e, link.path)}
-                  className="text-sm font-medium transition-colors hover:text-primary text-foreground/90"
+                  className="text-base font-medium transition-colors hover:text-primary text-foreground/90"
                 >
                   {link.name}
                 </a>
               ))}
               <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
-                <Button className="w-full">Contact Us</Button>
+                <Button className="w-full">Contact</Button>
               </a>
             </div>
           </div>

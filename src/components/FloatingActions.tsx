@@ -37,19 +37,21 @@ const FloatingActions = () => {
       <Button
         onClick={scrollToContact}
         size="lg"
-        className="h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-        title="Contact Us"
+        className="h-auto px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center gap-2"
+        title="Call Us"
       >
-        <MessageCircle className="h-6 w-6" />
+        <MessageCircle className="h-5 w-5" />
+        <span className="font-semibold">CALL US</span>
       </Button>
       <Button
         onClick={scrollToTop}
         size="lg"
         variant="outline"
-        className="h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 bg-card/80 backdrop-blur-sm"
+        className="h-auto px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 bg-card/80 backdrop-blur-sm flex items-center gap-2"
         title="Back to Top"
       >
-        <ArrowUp className="h-6 w-6" />
+        <ArrowUp className="h-5 w-5" />
+        <span className="font-semibold">BACK TO TOP</span>
       </Button>
     </div>
   );
