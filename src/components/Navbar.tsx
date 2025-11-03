@@ -104,7 +104,7 @@ const Navbar = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
+          <div className="md:hidden py-4 animate-fade-in bg-background/90 backdrop-blur-md rounded-lg">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => 
                 link.isRoute ? (
