@@ -10,6 +10,8 @@ import {
   Calendar, Clock, ArrowRight, Mail, Phone, MapPin, CheckCircle
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import FloatingActions from "@/components/FloatingActions";
 import heroImage from "@/assets/hero-data-transformation.jpg";
 import teamImage from "@/assets/about-team.jpg";
 import servicesImage from "@/assets/services-infrastructure.jpg";
@@ -19,6 +21,12 @@ import contactImage from "@/assets/contact-office.jpg";
 
 const Index = () => {
   const { toast } = useToast();
+  const statsSection = useScrollAnimation();
+  const aboutSection = useScrollAnimation();
+  const servicesSection = useScrollAnimation();
+  const portfolioSection = useScrollAnimation();
+  const blogSection = useScrollAnimation();
+  const contactSection = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -162,6 +170,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <FloatingActions />
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-[hsl(192,60%,12%)] to-[hsl(220,50%,15%)]" />
@@ -198,7 +207,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 bg-card/50">
+      <section ref={statsSection.elementRef} className={`py-20 px-4 bg-card/50 transition-all duration-1000 ${statsSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -217,7 +226,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-32 px-4">
+      <section ref={aboutSection.elementRef} id="about" className={`py-32 px-4 transition-all duration-1000 ${aboutSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">About NexServ Consulting</h2>
@@ -263,7 +272,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 px-4 bg-card/30">
+      <section ref={servicesSection.elementRef} id="services" className={`py-32 px-4 bg-card/30 transition-all duration-1000 ${servicesSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">Our Services</h2>
@@ -298,7 +307,7 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-32 px-4">
+      <section ref={portfolioSection.elementRef} id="portfolio" className={`py-32 px-4 transition-all duration-1000 ${portfolioSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">Our Portfolio</h2>
@@ -331,7 +340,7 @@ const Index = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-32 px-4 bg-card/30">
+      <section ref={blogSection.elementRef} id="blog" className={`py-32 px-4 bg-card/30 transition-all duration-1000 ${blogSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">Latest Insights</h2>
@@ -369,7 +378,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-32 px-4">
+      <section ref={contactSection.elementRef} id="contact" className={`py-32 px-4 transition-all duration-1000 ${contactSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">Get in Touch</h2>
