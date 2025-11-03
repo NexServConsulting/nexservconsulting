@@ -57,6 +57,29 @@ const Blog = () => {
         </div>
       </section>
 
+      {/* Categories Section */}
+      <section className="py-12 px-4 bg-secondary/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Browse by Topic</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore articles organized by category
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <Button 
+                key={category} 
+                variant={selectedCategory === category ? "default" : "outline"}
+                onClick={() => handleCategoryChange(category)}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Blog Posts */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -133,29 +156,6 @@ const Blog = () => {
               </Pagination>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* Categories Section */}
-      <section className="py-20 px-4 bg-secondary/50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Browse by Topic</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore articles organized by category
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <Button 
-                key={category} 
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => handleCategoryChange(category)}
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
         </div>
       </section>
     </div>
