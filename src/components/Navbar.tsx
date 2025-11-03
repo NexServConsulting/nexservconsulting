@@ -59,7 +59,7 @@ const Navbar = () => {
                 key={link.path}
                 href={link.path}
                 onClick={(e) => handleNavClick(e, link.path)}
-                className="text-base font-medium transition-colors hover:text-primary text-foreground/90"
+                className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
               >
                 {link.name}
               </a>
@@ -85,7 +85,7 @@ const Navbar = () => {
                   key={link.path}
                   href={link.path}
                   onClick={(e) => handleNavClick(e, link.path)}
-                  className="text-base font-medium transition-colors hover:text-primary text-foreground/90"
+                  className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
                 >
                   {link.name}
                 </a>
