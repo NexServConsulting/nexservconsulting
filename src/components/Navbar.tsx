@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
@@ -7,6 +7,8 @@ import logo from "@/assets/logo.png";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,13 @@ const Navbar = () => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
     
+    // If not on home page, navigate to home with hash
+    if (location.pathname !== '/') {
+      navigate('/' + path);
+      return;
+    }
+    
+    // If on home page, smooth scroll to section
     if (path === "#home") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
