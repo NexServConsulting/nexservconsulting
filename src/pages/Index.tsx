@@ -13,6 +13,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import FloatingActions from "@/components/FloatingActions";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-data-transformation.jpg";
 import teamImage from "@/assets/about-team.jpg";
 import servicesImage from "@/assets/services-infrastructure.jpg";
@@ -148,6 +149,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Data Migration & Database Optimization Services"
+        description="Expert data migration, database optimization, and Azure SQL solutions. Transform your data infrastructure with NexServ Consulting's proven methodologies and 20+ years of experience."
+        keywords="data migration, database optimization, Azure SQL, SQL Server, SSIS, data conversion, cloud solutions, MS Access, Excel automation"
+        canonical="/"
+      />
       <FloatingActions />
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">

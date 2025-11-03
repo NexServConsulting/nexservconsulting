@@ -11,6 +11,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import SEO from "@/components/SEO";
 import blogImage from "@/assets/blog-insights.jpg";
 import { blogPosts, categories } from "@/data/blogPosts";
 
@@ -37,6 +38,12 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <SEO 
+        title="Data Management Insights & Best Practices"
+        description="Expert insights on data migration, database optimization, Azure SQL, and cloud solutions. Stay updated with the latest trends and best practices in data management."
+        keywords="data migration tips, database optimization guide, Azure SQL best practices, SQL Server performance, cloud data solutions"
+        canonical="/blog"
+      />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0">
