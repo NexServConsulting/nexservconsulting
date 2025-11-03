@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server, ArrowRight } from "lucide-react";
+import servicesImage from "@/assets/services-infrastructure.jpg";
 
 const Services = () => {
   const services = [
@@ -76,8 +77,16 @@ const Services = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto">
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={servicesImage} 
+            alt="Modern data center infrastructure" 
+            className="w-full h-full object-cover opacity-15"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+        </div>
+        <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-5xl font-bold mb-6">Our Services</h1>
             <p className="text-xl text-muted-foreground">

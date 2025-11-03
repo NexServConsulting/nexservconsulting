@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import contactImage from "@/assets/contact-office.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -201,13 +202,17 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Office Section */}
       <section className="py-20 px-4 bg-secondary/50">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Visit Our Office</h2>
-            <div className="aspect-video bg-muted rounded-xl flex items-center justify-center">
-              <MapPin className="h-12 w-12 text-muted-foreground" />
+            <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={contactImage} 
+                alt="NexServ Consulting modern office workspace with data dashboards" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Lightbulb, Award } from "lucide-react";
+import teamImage from "@/assets/about-team.jpg";
 
 const About = () => {
   const values = [
@@ -42,14 +43,30 @@ const About = () => {
       {/* Story Section */}
       <section className="py-20 px-4 bg-secondary/50">
         <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img 
+                src={teamImage} 
+                alt="NexServ Consulting team collaborating on data analytics" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold">Our Story</h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Founded with a vision to simplify complex data challenges, NexServ Consulting has grown into a trusted partner for businesses across industries. Our journey began with a simple belief: that every organization deserves access to world-class data management solutions.
+                </p>
+                <p>
+                  Today, we serve clients ranging from startups to Fortune 500 companies, helping them migrate, optimize, and manage their data infrastructure with confidence.
+                </p>
+              </div>
+            </div>
+          </div>
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Founded with a vision to simplify complex data challenges, NexServ Consulting has grown into a trusted partner for businesses across industries. Our journey began with a simple belief: that every organization deserves access to world-class data management solutions.
-              </p>
-              <p>
-                Today, we serve clients ranging from startups to Fortune 500 companies, helping them migrate, optimize, and manage their data infrastructure with confidence. Our team of experts brings together decades of combined experience in database management, cloud solutions, and enterprise data architecture.
+                Our team of experts brings together decades of combined experience in database management, cloud solutions, and enterprise data architecture.
               </p>
               <p>
                 We specialize in Microsoft technologies including Excel, MS Access, SQL Server, SSIS, and Azure SQL, ensuring seamless integration with your existing ecosystem while preparing you for the future of data management.

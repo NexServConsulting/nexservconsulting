@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Database, Cloud, RefreshCw, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
+import heroImage from "@/assets/hero-data-transformation.jpg";
+import whyChooseImage from "@/assets/why-choose-us.jpg";
 
 const Home = () => {
   const services = [
@@ -38,7 +40,14 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-5" />
+        <div className="absolute inset-0">
+          <img 
+            src={heroImage} 
+            alt="Data transformation and cloud computing" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90" />
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -128,8 +137,12 @@ const Home = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <Database className="h-32 w-32 text-primary/40" />
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src={whyChooseImage} 
+                  alt="Advanced data visualization and cloud connectivity" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
