@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Facebook } from "lucide-react";
-import { X } from "lucide-react";
+import XIcon from "./icons/XIcon";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -71,7 +71,7 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="X (Twitter)">
-                <X size={20} />
+                <XIcon size={20} />
               </a>
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
