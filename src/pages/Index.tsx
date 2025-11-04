@@ -38,6 +38,12 @@ import servicesImage from "@/assets/services-infrastructure.jpg";
 import portfolioImage from "@/assets/portfolio-migration.jpg";
 import blogImage from "@/assets/blog-insights.jpg";
 import contactImage from "@/assets/contact-office.jpg";
+import serviceDataMigration from "@/assets/service-data-migration.jpg";
+import serviceDataConversion from "@/assets/service-data-conversion.jpg";
+import serviceDatabaseOptimization from "@/assets/service-database-optimization.jpg";
+import serviceAzureSQL from "@/assets/service-azure-sql.jpg";
+import serviceExcelAccess from "@/assets/service-excel-access.jpg";
+import serviceSQLServer from "@/assets/service-sql-server.jpg";
 import { blogPosts } from "@/data/blogPosts";
 
 const Index = () => {
@@ -71,40 +77,46 @@ const Index = () => {
 
   const services = [
     {
-      icon: Database,
+      image: serviceDataMigration,
       title: "Data Migration Services",
       description: "Seamlessly migrate your data across platforms with our proven methodologies.",
       features: ["Zero downtime migration", "Cross-platform transfer", "Data integrity verification"],
+      alt: "Professional working on data migration with multiple screens",
     },
     {
-      icon: RefreshCw,
+      image: serviceDataConversion,
       title: "Data Conversion",
       description: "Transform your data formats while maintaining structure and accuracy.",
       features: ["Format transformation", "Structure optimization", "Automated validation"],
+      alt: "Team analyzing data conversion and transformation",
     },
     {
-      icon: Zap,
+      image: serviceDatabaseOptimization,
       title: "Database Optimization",
       description: "Enhance performance and efficiency of your database infrastructure.",
       features: ["Query optimization", "Index tuning", "Performance monitoring"],
+      alt: "Professionals reviewing database performance metrics",
     },
     {
-      icon: Cloud,
+      image: serviceAzureSQL,
       title: "Azure SQL Solutions",
       description: "Leverage the power of cloud computing for your data infrastructure.",
       features: ["Cloud migration", "Hybrid solutions", "Security implementation"],
+      alt: "Team working with Azure cloud solutions and dashboards",
     },
     {
-      icon: FileSpreadsheet,
+      image: serviceExcelAccess,
       title: "Excel & Access Solutions",
       description: "Modernize and optimize your Excel and Access applications.",
       features: ["Application development", "Automation solutions", "Integration services"],
+      alt: "Professional working with Excel spreadsheets",
     },
     {
-      icon: Server,
+      image: serviceSQLServer,
       title: "SQL Server & SSIS",
       description: "Expert implementation and management of SQL Server solutions.",
       features: ["ETL development", "Package optimization", "Server management"],
+      alt: "Team managing SQL Server infrastructure and monitoring",
     },
   ];
 
@@ -301,12 +313,16 @@ const Index = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1"
+                className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.alt}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
-                    <service.icon className="h-7 w-7 text-white" />
-                  </div>
                   <CardTitle className="text-2xl text-white">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
