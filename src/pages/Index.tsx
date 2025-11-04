@@ -219,7 +219,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "25+", label: "Projects Completed" },
+              { value: "15+", label: "Projects Completed" },
               { value: "98%", label: "Client Satisfaction" },
               { value: "5+", label: "Enterprise Clients" },
               { value: "20+", label: "Years Experience" },
