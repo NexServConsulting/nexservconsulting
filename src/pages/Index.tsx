@@ -313,13 +313,13 @@ const Index = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                className="group bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                   />
                 </div>
                 <CardHeader>
