@@ -84,8 +84,6 @@ const BlogPost = () => {
           
           {post.slug === "sql-server-performance-optimization" && (
             <>
-              <p className="text-xl text-muted-foreground mb-6">By Rex Dev</p>
-              
               <p>When SQL Server slows down, so does your business. Reports lag, applications timeout, and productivity takes a hit. The good news? You don't need to reinvent the wheel to make SQL Server run faster. Most performance problems come down to a few well-understood causes — and the fixes are just as clear. This quick guide focuses on what companies actually do in production to keep SQL Server running at its best.</p>
               
               <h2>1. Start with the Right Baseline</h2>
