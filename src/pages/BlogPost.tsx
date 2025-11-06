@@ -83,119 +83,140 @@ const BlogPost = () => {
           )}
           
           {post.slug === "sql-server-performance-optimization" && (
-  <>
-    <p className="text-lg leading-relaxed mb-8">
-      When SQL Server slows down, everything slows with it — dashboards, reports, and entire business processes. 
-      But most performance issues aren’t mysterious. They come down to a handful of common causes — and proven fixes. 
-      This quick, no-BS guide covers what companies actually do in production to keep SQL Server stable, predictable, and fast.
-    </p>
-
-    <h2 className="mt-12 mb-4">1. Start with a Baseline</h2>
-    <p className="mb-4">
-      You can’t fix what you can’t measure. Before touching any configuration, capture a baseline using 
-      <strong> PerfMon</strong>, <strong>Query Store</strong>, or <strong>Extended Events</strong>. 
-      Track CPU utilization, memory pressure, I/O latency, and query response times. 
-      A baseline helps you distinguish between a real issue and normal workload spikes.
-    </p>
-    <p className="mb-6">
-      Most teams log these metrics weekly and visualize them in Power BI or Grafana — it’s simple, consistent, 
-      and invaluable when diagnosing slowdowns.
-    </p>
-
-    <h2 className="mt-12 mb-4">2. Fix the Queries, Not the Server</h2>
-    <p className="mb-4">
-      About 80% of SQL performance issues stem from inefficient queries, not hardware. 
-      Use <strong>Query Store</strong> (SQL Server 2016+) to identify the top resource-consuming queries and focus your optimization there.
-    </p>
-    <ul className="mb-6 space-y-3 list-disc pl-6">
-      <li><strong>Indexing:</strong> Fix missing or fragmented indexes. Use <code>sys.dm_db_missing_index_details</code> to find them and rebuild when necessary.</li>
-      <li><strong>Statistics:</strong> Keep statistics up to date with <code>UPDATE STATISTICS</code> or auto-update.</li>
-      <li><strong>SELECT only what you need:</strong> Avoid <code>SELECT *</code> to reduce overhead.</li>
-      <li><strong>Parameter sniffing:</strong> Handle with <code>OPTION (RECOMPILE)</code> or parameter masking strategies if query plans vary by user.</li>
-    </ul>
-
-    <h2 className="mt-12 mb-4">3. Optimize TempDB</h2>
-    <p className="mb-4">
-      TempDB is one of SQL Server’s busiest system databases. When misconfigured, it can cause major contention.
-      Production-proven tips:
-    </p>
-    <ul className="mb-6 space-y-2 list-disc pl-6">
-      <li>Use multiple data files — one per CPU core (up to 8).</li>
-      <li>Keep files the same size to avoid allocation contention.</li>
-      <li>Place TempDB on SSD or NVMe storage.</li>
-      <li>Pre-size it to prevent constant autogrowth.</li>
-    </ul>
-
-    <h2 className="mt-12 mb-4">4. Tune Memory and Parallelism</h2>
-    <p className="mb-4">
-      Two configuration settings have outsized impact: memory allocation and CPU parallelism.
-    </p>
-    <ul className="mb-6 space-y-3 list-disc pl-6">
-      <li>
-        <strong>Max Server Memory:</strong> Leave 20–25% of system memory for the OS. 
-        On a 64GB server, set SQL Server’s max memory to around 50GB.
-      </li>
-      <li>
-        <strong>MAXDOP:</strong> Controls CPU usage per query. 
-        Follow Microsoft’s rule of thumb: set <code>MAXDOP = 8</code> or per NUMA node, 
-        and raise <strong>Cost Threshold for Parallelism</strong> to 30–50 to avoid trivial parallel plans.
-      </li>
-    </ul>
-
-    <h2 className="mt-12 mb-4">5. Maintain Indexes Smartly</h2>
-    <p className="mb-4">
-      Indexes speed up reads but slow down writes. A balanced maintenance plan keeps performance steady:
-    </p>
-    <ul className="mb-4 space-y-2 list-disc pl-6">
-      <li>Rebuild indexes with fragmentation above 30%.</li>
-      <li>Reorganize between 10–30%.</li>
-      <li>Drop unused indexes using <code>sys.dm_db_index_usage_stats</code>.</li>
-      <li>Automate with <strong>Ola Hallengren’s Maintenance Solution</strong> — a proven industry tool.</li>
-    </ul>
-
-    <h2 className="mt-12 mb-4">6. Eliminate Blocking and Deadlocks</h2>
-    <p className="mb-6">
-      Use <strong>sp_whoisactive</strong> or <strong>Extended Events</strong> to detect blocking sessions. 
-      Common causes include missing indexes or long transactions. 
-      Keep transactions short and commit fast to prevent cascading locks.
-    </p>
-
-    <h2 className="mt-12 mb-4">7. Watch Your Storage</h2>
-    <p className="mb-4">
-      Even great queries suffer on slow disks. Most production servers follow these rules:
-    </p>
-    <ul className="mb-4 space-y-2 list-disc pl-6">
-      <li>Separate volumes for data, logs, TempDB, and backups.</li>
-      <li>Use SSD/NVMe storage with write caching (battery-backed).</li>
-      <li>Enable <strong>Instant File Initialization</strong> for faster growth.</li>
-      <li>Check latency with <code>sys.dm_io_virtual_file_stats</code> — aim for under 10ms.</li>
-    </ul>
-
-    <h2 className="mt-12 mb-4">8. Automate Health Checks</h2>
-    <p className="mb-4">
-      Performance tuning is ongoing. Automate daily checks for:
-    </p>
-    <ul className="mb-4 space-y-2 list-disc pl-6">
-      <li>Long-running queries</li>
-      <li>High CPU or I/O usage</li>
-      <li>Fragmentation levels</li>
-      <li>Error logs and failed jobs</li>
-    </ul>
-    <p className="mb-6">
-      Many teams use PowerShell, SQL Agent Jobs, or Azure Monitor to schedule and visualize these metrics.
-    </p>
-
-    <h2 className="mt-12 mb-4">Final Thoughts</h2>
-    <p className="mb-4">
-      SQL Server tuning isn’t about guesswork — it’s about discipline. 
-      Measure first, fix what matters, automate the rest. 
-      The best environments aren’t heroic — they’re consistent, documented, and quietly efficient.
-    </p>
-    <p>
-      Keep it predictable, keep it stable, and SQL Server will reward you with performance that scales as your business grows.
-    </p>
-  </>
-)}
+            <>
+              <p className="text-lg leading-relaxed mb-8">
+                When SQL Server slows down, everything slows with it — dashboards, reports, and entire business processes. 
+                But most performance issues aren’t mysterious. They come down to a handful of common causes — and proven fixes. 
+                This quick, no-BS guide covers what companies actually do in production to keep SQL Server stable, predictable, and fast.
+              </p>
+          
+              <h2 className="mt-12 mb-4">1. Start with a Baseline</h2>
+              <p className="mb-4">
+                You can’t fix what you can’t measure. Before touching any configuration, capture a baseline using 
+                <strong> PerfMon</strong>, <strong>Query Store</strong>, or <strong>Extended Events</strong>. 
+                Track CPU utilization, memory pressure, I/O latency, and query response times. 
+                A baseline helps you distinguish between a real issue and normal workload spikes.
+              </p>
+              <p className="mb-6">
+                Most teams log these metrics weekly and visualize them in Power BI or Grafana — it’s simple, consistent, 
+                and invaluable when diagnosing slowdowns.
+              </p>
+          
+              <h2 className="mt-12 mb-4">2. Fix the Queries, Not the Server</h2>
+              <p className="mb-4">
+                About 80% of SQL performance issues stem from inefficient queries, not hardware. 
+                Use <strong>Query Store</strong> (SQL Server 2016+) to identify the top resource-consuming queries and focus your optimization there.
+              </p>
+              <ul className="mb-6 space-y-3 list-disc pl-6">
+                <li><strong>Indexing:</strong> Fix missing or fragmented indexes. Use <code>sys.dm_db_missing_index_details</code> to find them and rebuild when necessary.</li>
+                <li><strong>Statistics:</strong> Keep statistics up to date with <code>UPDATE STATISTICS</code> or auto-update.</li>
+                <li><strong>SELECT only what you need:</strong> Avoid <code>SELECT *</code> to reduce overhead.</li>
+                <li><strong>Parameter sniffing:</strong> Handle with <code>OPTION (RECOMPILE)</code> or parameter masking strategies if query plans vary by user.</li>
+              </ul>
+          
+              <h2 className="mt-12 mb-4">3. Optimize TempDB</h2>
+              <p className="mb-4">
+                TempDB is one of SQL Server’s busiest system databases. When misconfigured, it can cause major contention.
+                Production-proven tips:
+              </p>
+              <ul className="mb-6 space-y-2 list-disc pl-6">
+                <li>Use multiple data files — one per CPU core (up to 8).</li>
+                <li>Keep files the same size to avoid allocation contention.</li>
+                <li>Place TempDB on SSD or NVMe storage.</li>
+                <li>Pre-size it to prevent constant autogrowth.</li>
+              </ul>
+          
+              <h2 className="mt-12 mb-4">4. Tune Memory and Parallelism</h2>
+              <p className="mb-4">
+                Two configuration settings have outsized impact: memory allocation and CPU parallelism.
+              </p>
+              <ul className="mb-6 space-y-3 list-disc pl-6">
+                <li>
+                  <strong>Max Server Memory:</strong> Leave 20–25% of system memory for the OS. 
+                  On a 64GB server, set SQL Server’s max memory to around 50GB.
+                </li>
+                <li>
+                  <strong>MAXDOP:</strong> Controls CPU usage per query. 
+                  Follow Microsoft’s rule of thumb: set <code>MAXDOP = 8</code> or per NUMA node, 
+                  and raise <strong>Cost Threshold for Parallelism</strong> to 30–50 to avoid trivial parallel plans.
+                </li>
+              </ul>
+          
+              <h2 className="mt-12 mb-4">5. Maintain Indexes Smartly</h2>
+              <p className="mb-4">
+                Indexes speed up reads but slow down writes. A balanced maintenance plan keeps performance steady:
+              </p>
+              <ul className="mb-4 space-y-2 list-disc pl-6">
+                <li>Rebuild indexes with fragmentation above 30%.</li>
+                <li>Reorganize between 10–30%.</li>
+                <li>Drop unused indexes using <code>sys.dm_db_index_usage_stats</code>.</li>
+                <li>Automate with <strong>Ola Hallengren’s Maintenance Solution</strong> — a proven industry tool.</li>
+              </ul>
+          
+              <h2 className="mt-12 mb-4">6. Eliminate Blocking and Deadlocks</h2>
+              <p className="mb-6">
+                Use <strong>sp_whoisactive</strong> or <strong>Extended Events</strong> to detect blocking sessions. 
+                Common causes include missing indexes or long transactions. 
+                Keep transactions short and commit fast to prevent cascading locks.
+              </p>
+          
+              <h2 className="mt-12 mb-4">7. Watch Your Storage</h2>
+              <p className="mb-4">
+                Even great queries suffer on slow disks. Most production servers follow these rules:
+              </p>
+              <ul className="mb-4 space-y-2 list-disc pl-6">
+                <li>Separate volumes for data, logs, TempDB, and backups.</li>
+                <li>Use SSD/NVMe storage with write caching (battery-backed).</li>
+                <li>Enable <strong>Instant File Initialization</strong> for faster growth.</li>
+                <li>Check latency with <code>sys.dm_io_virtual_file_stats</code> — aim for under 10ms.</li>
+              </ul>
+          
+              <h2 className="mt-12 mb-4">8. Automate Health Checks</h2>
+              <p className="mb-4">
+                Performance tuning is ongoing. Automate daily checks for:
+              </p>
+              <ul className="mb-4 space-y-2 list-disc pl-6">
+                <li>Long-running queries</li>
+                <li>High CPU or I/O usage</li>
+                <li>Fragmentation levels</li>
+                <li>Error logs and failed jobs</li>
+              </ul>
+              <p className="mb-6">
+                Many teams use PowerShell, SQL Agent Jobs, or Azure Monitor to schedule and visualize these metrics.
+              </p>
+          
+              <h2 className="mt-12 mb-4">Final Thoughts</h2>
+              <p className="mb-4">
+                SQL Server tuning isn’t about guesswork — it’s about discipline. 
+                Measure first, fix what matters, automate the rest. 
+                The best environments aren’t heroic — they’re consistent, documented, and quietly efficient.
+              </p>
+              <p>
+                Keep it predictable, keep it stable, and SQL Server will reward you with performance that scales as your business grows.
+              </p>
+            </>
+          )}
+          <div className="mt-16 p-6 border border-gray-200 rounded-2xl bg-gray-50">
+          <h3 className="text-xl font-semibold mb-3">About the Author</h3>
+          <p className="text-gray-700 leading-relaxed">
+            <strong>Rex Dev</strong> is a seasoned Data Engineer and SQL Server specialist based in British Columbia, Canada, 
+            with over 22 years of experience in database performance optimization, data integration, and enterprise system design. 
+            He has led data modernization projects across finance, healthcare, and technology sectors — helping teams 
+            build reliable, high-performing data platforms using Microsoft SQL Server, SSIS, and Azure.
+          </p>
+          <p className="text-gray-600 mt-3">
+            Connect with Rex on{" "}
+            <a
+              href="https://www.linkedin.com/in/rexdev" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              LinkedIn
+            </a>{" "}
+            for insights on SQL performance tuning, data architecture, and automation best practices.
+          </p>
+        </div>
 
           
           {post.slug === "enterprise-data-migration-strategies" && (
