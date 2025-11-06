@@ -429,7 +429,7 @@ const Index = () => {
 
           {/* View All Insights Button */}
           <div className="text-center mt-12">
-            <Link to="/blog">
+            <Link to="/blog" onClick={() => window.scrollTo(0, 0)}>
               <Button size="lg" variant="outline">
                 View All Insights
                 <ArrowRight className="ml-2 h-4 w-4" />
