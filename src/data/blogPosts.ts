@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     slug: "database-migration-azure-sql",
   },
   {
-    title: "Optimizing SQL Server Performance: A Complete Guide",
+    title: "Optimizing SQL Server Performance: A Quick Guide",
     excerpt: "Discover proven techniques to enhance your SQL Server performance, from query optimization to index management.",
     category: "Database Optimization",
     date: "2024-01-10",
