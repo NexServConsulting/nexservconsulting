@@ -253,7 +253,7 @@ const Index = () => {
       >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-white">About NexServ Consulting</h2>
+            <h2 className="text-5xl font-bold mb-6 text-foreground">About NexServ Consulting</h2>
             <p className="text-xl text-muted-foreground">
               We're a team of data experts passionate about helping businesses unlock the full potential of their data
               infrastructure.
@@ -265,7 +265,7 @@ const Index = () => {
               <img src={teamImage} alt="NexServ Consulting team collaborating" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white">Our Story</h3>
+              <h3 className="text-3xl font-bold text-foreground">Our Story</h3>
               <p className="text-muted-foreground text-lg">
                 Recently founded by industry veterans, NexServ Consulting brings decades of experience in data
                 management to businesses across industries. We specialize in Microsoft technologies including Excel, MS
@@ -287,7 +287,7 @@ const Index = () => {
                   <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
                     <value.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">{value.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">{value.title}</h3>
                   <p className="text-muted-foreground">{value.description}</p>
                 </CardContent>
               </Card>
@@ -304,7 +304,7 @@ const Index = () => {
       >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-white">Our Services</h2>
+            <h2 className="text-5xl font-bold mb-6 text-foreground">Our Services</h2>
             <p className="text-xl text-muted-foreground">
               Comprehensive data solutions tailored to meet your specific business needs.
             </p>
@@ -323,7 +323,7 @@ const Index = () => {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-2xl text-white">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl text-foreground">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
@@ -350,7 +350,7 @@ const Index = () => {
       >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-white">Our Portfolio</h2>
+            <h2 className="text-5xl font-bold mb-6 text-foreground">Our Portfolio</h2>
             <p className="text-xl text-muted-foreground">
               Discover how we've helped businesses transform their data infrastructure.
             </p>
@@ -365,7 +365,7 @@ const Index = () => {
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
                     <project.icon className="h-7 w-7 text-white" />
                   </div>
-                  <CardTitle className="text-2xl mb-2 text-white">{project.title}</CardTitle>
+                  <CardTitle className="text-2xl mb-2 text-foreground">{project.title}</CardTitle>
                   <p className="text-sm text-primary">{project.client}</p>
                 </CardHeader>
                 <CardContent>
@@ -392,7 +392,7 @@ const Index = () => {
       >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-white">Latest Insights</h2>
+            <h2 className="text-5xl font-bold mb-6 text-foreground">Latest Insights</h2>
             <p className="text-xl text-muted-foreground">Tips and best practices from our data experts.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -408,7 +408,7 @@ const Index = () => {
                   <Badge variant="secondary" className="w-fit mb-2">
                     {post.category}
                   </Badge>
-                  <CardTitle className="text-xl text-white">{post.title}</CardTitle>
+                  <CardTitle className="text-xl text-foreground">{post.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{post.excerpt}</p>
@@ -447,7 +447,7 @@ const Index = () => {
       >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-white">Get in Touch</h2>
+            <h2 className="text-5xl font-bold mb-6 text-foreground">Get in Touch</h2>
             <p className="text-xl text-muted-foreground">
               Ready to transform your data infrastructure? Let's start a conversation.
             </p>
@@ -458,7 +458,7 @@ const Index = () => {
             <div className="space-y-6">
               <Card className="bg-card border-border">
                 <CardHeader>
-                  <CardTitle className="text-white">Contact Information</CardTitle>
+                  <CardTitle className="text-foreground">Contact Information</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -466,7 +466,7 @@ const Index = () => {
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-white">Email</p>
+                      <p className="font-medium text-foreground">Email</p>
                       <p className="text-sm text-muted-foreground">info@nexservconsulting.com</p>
                     </div>
                   </div>
@@ -475,7 +475,7 @@ const Index = () => {
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-white">Phone</p>
+                      <p className="font-medium text-foreground">Phone</p>
                       <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
                     </div>
                   </div>
@@ -484,7 +484,7 @@ const Index = () => {
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-white">Location</p>
+                      <p className="font-medium text-foreground">Location</p>
                       <p className="text-sm text-muted-foreground">New York, NY 10001</p>
                     </div>
                   </div>
@@ -496,7 +496,7 @@ const Index = () => {
             <div className="lg:col-span-2">
               <Card className="bg-card border-border">
                 <CardHeader>
-                  <CardTitle className="text-white">Send Us a Message</CardTitle>
+                  <CardTitle className="text-foreground">Send Us a Message</CardTitle>
                   <p className="text-sm text-muted-foreground">
                     Fill out the form and we'll get back to you within 24 hours.
                   </p>
@@ -505,7 +505,7 @@ const Index = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium text-white">
+                        <label htmlFor="name" className="text-sm font-medium text-foreground">
                           Full Name *
                         </label>
                         <Input
@@ -519,7 +519,7 @@ const Index = () => {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium text-white">
+                        <label htmlFor="email" className="text-sm font-medium text-foreground">
                           Email Address *
                         </label>
                         <Input
@@ -537,7 +537,7 @@ const Index = () => {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label htmlFor="company" className="text-sm font-medium text-white">
+                        <label htmlFor="company" className="text-sm font-medium text-foreground">
                           Company
                         </label>
                         <Input
@@ -550,7 +550,7 @@ const Index = () => {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="phone" className="text-sm font-medium text-white">
+                        <label htmlFor="phone" className="text-sm font-medium text-foreground">
                           Phone Number
                         </label>
                         <Input
@@ -566,7 +566,7 @@ const Index = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium text-white">
+                      <label htmlFor="message" className="text-sm font-medium text-foreground">
                         Message *
                       </label>
                       <Textarea

@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-white">Quick Links</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#home" onClick={(e) => handleNavClick(e, "#home")} className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</a></li>
               <li><a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-white">Services</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Services</h3>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">Data Migration</li>
               <li className="text-sm text-muted-foreground">Database Optimization</li>
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-white">Contact</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail size={16} />
