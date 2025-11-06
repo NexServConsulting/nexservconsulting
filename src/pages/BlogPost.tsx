@@ -196,28 +196,6 @@ const BlogPost = () => {
               </p>
             </>
           )}
-          <div className="mt-16 p-6 border border-border rounded-2xl bg-secondary/30">
-          <h3 className="text-xl font-semibold mb-3 text-foreground">About the Author</h3>
-          <p className="text-foreground leading-relaxed">
-            <strong>Rex Dev</strong> is a seasoned Data Engineer and SQL Server specialist based in British Columbia, Canada, 
-            with over 22 years of experience in database performance optimization, data integration, and enterprise system design. 
-            He has led data modernization projects across finance, healthcare, and technology sectors — helping teams 
-            build reliable, high-performing data platforms using Microsoft SQL Server, SSIS, and Azure.
-          </p>
-          <p className="text-muted-foreground mt-3">
-            Connect with Rex on{" "}
-            <a
-              href="https://www.linkedin.com/in/rexdev" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              LinkedIn
-            </a>{" "}
-            for insights on SQL performance tuning, data architecture, and automation best practices.
-          </p>
-        </div>
-
           
           {post.slug === "enterprise-data-migration-strategies" && (
             <>
@@ -317,6 +295,28 @@ const BlogPost = () => {
               </ul>
             </>
           )}
+          
+          <div className="mt-16 p-6 border border-border rounded-2xl bg-secondary/30">
+            <h3 className="text-xl font-semibold mb-3 text-foreground">About the Author</h3>
+            <p className="text-foreground leading-relaxed">
+              <strong>Rex Dev</strong> is a seasoned Data Engineer and SQL Server specialist based in British Columbia, Canada, 
+              with over 22 years of experience in database performance optimization, data integration, and enterprise system design. 
+              He has led data modernization projects across finance, healthcare, and technology sectors — helping teams 
+              build reliable, high-performing data platforms using Microsoft SQL Server, SSIS, and Azure.
+            </p>
+            <p className="text-muted-foreground mt-3">
+              Connect with Rex on{" "}
+              <a
+                href="https://www.linkedin.com/in/rexdev" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                LinkedIn
+              </a>{" "}
+              for insights on SQL performance tuning, data architecture, and automation best practices.
+            </p>
+          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t">
