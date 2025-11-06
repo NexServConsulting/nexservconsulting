@@ -1,6 +1,9 @@
 import blogAzureMigration from "@/assets/blog-azure-migration.jpg";
 import blogSqlOptimization from "@/assets/blog-sql-optimization.jpg";
 import blogDataMigration from "@/assets/blog-data-migration.jpg";
+import blogSsisEtl from "@/assets/blog-ssis-etl.jpg";
+import blogAccessModernization from "@/assets/blog-access-modernization.jpg";
+import blogSecurityCloud from "@/assets/blog-security-cloud.jpg";
 
 export interface BlogPost {
   title: string;
@@ -9,6 +12,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   image: string;
+  slug: string;
+  content?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -19,6 +24,7 @@ export const blogPosts: BlogPost[] = [
     date: "2024-01-15",
     readTime: "8 min read",
     image: blogAzureMigration,
+    slug: "database-migration-azure-sql",
   },
   {
     title: "Optimizing SQL Server Performance: A Complete Guide",
@@ -27,6 +33,7 @@ export const blogPosts: BlogPost[] = [
     date: "2024-01-10",
     readTime: "12 min read",
     image: blogSqlOptimization,
+    slug: "sql-server-performance-optimization",
   },
   {
     title: "Data Migration Strategies for Enterprise Systems",
@@ -35,6 +42,7 @@ export const blogPosts: BlogPost[] = [
     date: "2024-01-05",
     readTime: "10 min read",
     image: blogDataMigration,
+    slug: "enterprise-data-migration-strategies",
   },
   {
     title: "SSIS Best Practices for ETL Development",
@@ -42,7 +50,8 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "2023-12-28",
     readTime: "15 min read",
-    image: blogSqlOptimization,
+    image: blogSsisEtl,
+    slug: "ssis-etl-best-practices",
   },
   {
     title: "Modernizing Legacy Access Databases",
@@ -50,7 +59,8 @@ export const blogPosts: BlogPost[] = [
     category: "Modernization",
     date: "2023-12-20",
     readTime: "7 min read",
-    image: blogDataMigration,
+    image: blogAccessModernization,
+    slug: "modernizing-legacy-access-databases",
   },
   {
     title: "Data Security in Cloud Migrations",
@@ -58,7 +68,8 @@ export const blogPosts: BlogPost[] = [
     category: "Security",
     date: "2023-12-15",
     readTime: "9 min read",
-    image: blogAzureMigration,
+    image: blogSecurityCloud,
+    slug: "data-security-cloud-migrations",
   },
 ];
 
