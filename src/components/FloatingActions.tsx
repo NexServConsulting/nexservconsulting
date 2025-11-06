@@ -43,31 +43,28 @@ const FloatingActions = () => {
       <Button
         onClick={scrollToContact}
         size="lg"
-        className="h-auto px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center gap-2"
+        className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 p-0"
         title="Call Us"
       >
-        <MessageCircle className="h-5 w-5" />
-        <span className="font-semibold">CALL US</span>
+        <MessageCircle className="h-6 w-6" />
       </Button>
       <Button
         onClick={toggleTheme}
         size="lg"
         variant="secondary"
-        className="h-auto px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center gap-2"
+        className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 p-0"
         title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
       >
-        {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-        <span className="font-semibold">THEME</span>
+        {theme === "dark" ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />}
       </Button>
       <Button
         onClick={scrollToTop}
         size="lg"
         variant="outline"
-        className="h-auto px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 bg-card/80 backdrop-blur-sm flex items-center gap-2"
+        className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 bg-card/80 backdrop-blur-sm p-0"
         title="Back to Top"
       >
-        <ArrowUp className="h-5 w-5" />
-        <span className="font-semibold">BACK TO TOP</span>
+        <ArrowUp className="h-6 w-6" />
       </Button>
     </div>
   );
