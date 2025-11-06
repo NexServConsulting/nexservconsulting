@@ -92,7 +92,7 @@ const BlogPost = () => {
               
               <h2 className="mt-12 mb-4">2. Fix Slow Queries First</h2>
               <p className="mb-4">The majority of SQL performance issues are query-related, not hardware-related. Use Query Store (available in SQL Server 2016+) to identify top resource-consuming queries. Once you have the culprits, focus on these fixes:</p>
-              <ul className="mb-6 space-y-3">
+              <ul className="mb-6 space-y-3 list-disc pl-6">
                 <li><strong>Add or adjust indexes:</strong> Missing or fragmented indexes are the top performance killers. Use sys.dm_db_missing_index_details to identify opportunities and ALTER INDEX REBUILD or REORGANIZE to keep them healthy.</li>
                 <li><strong>Update statistics:</strong> Run UPDATE STATISTICS regularly (or enable auto-update stats). Outdated statistics lead to poor execution plans.</li>
                 <li><strong>Avoid SELECT *:</strong> Fetch only what you need. Every unnecessary column adds overhead.</li>
@@ -101,7 +101,7 @@ const BlogPost = () => {
               
               <h2 className="mt-12 mb-4">3. Optimize TempDB</h2>
               <p className="mb-4">Every serious SQL Server tuning checklist includes TempDB. It's a shared resource used by all sessions for temporary objects and sorting operations. Here's what most production setups do:</p>
-              <ul className="mb-6 space-y-2">
+              <ul className="mb-6 space-y-2 list-disc pl-6">
                 <li>Use multiple data files — typically one per logical CPU (up to 8).</li>
                 <li>Keep all files the same size to avoid allocation contention.</li>
                 <li>Place TempDB on fast storage (SSD/NVMe).</li>
@@ -110,14 +110,14 @@ const BlogPost = () => {
               
               <h2 className="mt-12 mb-4">4. Tune Memory and Max Degree of Parallelism (MAXDOP)</h2>
               <p className="mb-4">Two configuration settings have outsized impact:</p>
-              <ul className="mb-6 space-y-3">
+              <ul className="mb-6 space-y-3 list-disc pl-6">
                 <li><strong>Max Server Memory:</strong> Leave headroom for the OS. A general rule of thumb: allocate 75–80% of total system memory to SQL Server. Example: for a 64GB server, set max server memory to around 50GB.</li>
                 <li><strong>MAXDOP:</strong> Controls how many CPU cores a single query can use. Start with Microsoft's guidance — typically MAXDOP = number of cores per NUMA node, or MAXDOP = 8 if unsure. Combine it with Cost Threshold for Parallelism set between 30–50 to avoid parallelizing trivial queries.</li>
               </ul>
               
               <h2 className="mt-12 mb-4">5. Manage Index Maintenance</h2>
               <p className="mb-4">Indexes speed up reads but slow down writes. The sweet spot is strategic index maintenance:</p>
-              <ul className="mb-4 space-y-2">
+              <ul className="mb-4 space-y-2 list-disc pl-6">
                 <li>Rebuild indexes with fragmentation &gt;30%.</li>
                 <li>Reorganize indexes between 10–30%.</li>
                 <li>Schedule maintenance during off-hours.</li>
@@ -130,7 +130,7 @@ const BlogPost = () => {
               
               <h2 className="mt-12 mb-4">7. Watch Disk I/O and Storage Design</h2>
               <p className="mb-4">Fast storage still matters. Production environments typically use:</p>
-              <ul className="mb-4 space-y-2">
+              <ul className="mb-4 space-y-2 list-disc pl-6">
                 <li>Separate drives (or logical volumes) for data, logs, TempDB, and backups.</li>
                 <li>Write caching enabled on data disks, with battery-backed controllers for safety.</li>
                 <li>Instant File Initialization for faster database growth.</li>
@@ -139,7 +139,7 @@ const BlogPost = () => {
               
               <h2 className="mt-12 mb-4">8. Automate Health Checks</h2>
               <p className="mb-4">Performance tuning isn't a one-time effort. Build a daily health check that tracks:</p>
-              <ul className="mb-4 space-y-2">
+              <ul className="mb-4 space-y-2 list-disc pl-6">
                 <li>Long-running queries</li>
                 <li>I/O bottlenecks</li>
                 <li>CPU spikes</li>
