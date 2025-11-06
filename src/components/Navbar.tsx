@@ -23,7 +23,7 @@ const Navbar = () => {
     { name: "Company", path: "#about", isRoute: false },
     { name: "Services", path: "#services", isRoute: false },
     { name: "Work", path: "#portfolio", isRoute: false },
-    { name: "Blog", path: "/blog", isRoute: true },
+    { name: "Blog", path: "#blog", isRoute: false },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isRoute: boolean) => {
