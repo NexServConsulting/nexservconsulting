@@ -55,32 +55,207 @@ const BlogPost = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
-          {post.slug === "database-migration-azure-sql" && (
-            <>
-              <p className="text-xl text-muted-foreground mb-6">{post.excerpt}</p>
-              
-              <h2>Planning Your Migration</h2>
-              <p>Before embarking on a database migration to Azure SQL, thorough planning is essential. This phase involves assessing your current database infrastructure, identifying dependencies, and establishing clear migration objectives.</p>
-              
-              <h3>Assessment Phase</h3>
-              <p>Start by conducting a comprehensive assessment of your existing database. Use Microsoft's Data Migration Assistant (DMA) to identify any compatibility issues and get recommendations for your target Azure SQL platform.</p>
-              
-              <h2>Testing Strategy</h2>
-              <p>A robust testing strategy ensures that your migrated database performs as expected. This includes functional testing, performance testing, and user acceptance testing.</p>
-              
-              <h3>Performance Optimization</h3>
-              <p>Azure SQL offers unique optimization opportunities. Leverage features like automatic tuning, intelligent insights, and built-in monitoring to ensure optimal performance post-migration.</p>
-              
-              <h2>Best Practices</h2>
+          {post.slug === "onprem-to-azure-migration" && (
+            <article className="prose prose-lg max-w-none text-gray-800">
+              <h1 className="text-3xl font-bold mb-6">
+                🚀 Best Practices for On-Prem Database Migration to Azure SQL
+              </h1>
+              <p className="text-gray-600 italic mb-8">By Rex Dev</p>
+          
+              <p>
+                Migrating an on-prem SQL Server database to Azure SQL isn’t just about
+                moving data — it’s about modernizing how your systems operate, scale, and
+                recover. But without a solid plan, what should be a strategic upgrade can
+                turn into a slow, risky, and expensive project.
+              </p>
+          
+              <p>
+                After helping multiple organizations move to Azure SQL, I’ve learned that
+                success comes down to preparation, precision, and performance validation —
+                not just tooling. Here’s a no-fluff look at <strong>best practices that actually make migrations work</strong>.
+              </p>
+          
+              <h2>🔹 1. Start with a Full Assessment — Know What You’re Moving</h2>
+              <p>
+                Before you even talk about Azure resources or costs, start with discovery.
+                Run a comprehensive assessment of your current SQL environment using{" "}
+                <strong>Microsoft’s Data Migration Assistant (DMA)</strong> or{" "}
+                <strong>Azure Migrate</strong>.
+              </p>
+              <p>These tools identify:</p>
               <ul>
-                <li>Always maintain a complete backup before migration</li>
-                <li>Test your migration process in a non-production environment first</li>
-                <li>Plan for minimal downtime with online migration tools</li>
-                <li>Monitor performance metrics closely during and after migration</li>
-                <li>Implement proper security measures including encryption and access controls</li>
+                <li>Deprecated or incompatible SQL features (e.g., SQL CLR, linked servers)</li>
+                <li>Schema and data type mismatches</li>
+                <li>Performance-impacting dependencies (e.g., jobs, SSIS packages)</li>
+                <li>Migration blockers and remediation recommendations</li>
               </ul>
-            </>
+              <p>
+                <strong>Pro tip:</strong> Don’t skip this step. It defines your scope,
+                risk, and timeline — and helps you decide whether to migrate to{" "}
+                <em>Azure SQL Database</em>, <em>Azure SQL Managed Instance</em>, or{" "}
+                <em>SQL Server on Azure VM</em>.
+              </p>
+          
+              <h2>🔹 2. Choose the Right Azure SQL Model</h2>
+              <p>
+                Not all Azure SQL options are created equal. Your choice determines
+                performance, manageability, and cost.
+              </p>
+              <ul>
+                <li>
+                  <strong>Azure SQL Database:</strong> Great for modern apps that need scalability,
+                  built-in HA, and minimal management. Limited in SQL Agent jobs or
+                  cross-database features.
+                </li>
+                <li>
+                  <strong>Azure SQL Managed Instance:</strong> Best for lift-and-shift of
+                  enterprise workloads with full SQL Server compatibility.
+                </li>
+                <li>
+                  <strong>SQL Server on Azure VM:</strong> Use this when you need OS-level control
+                  or third-party agent support.
+                </li>
+              </ul>
+              <p>
+                <strong>Rule of thumb:</strong> If you’re modernizing, go Managed Instance.
+                If you’re simply rehosting, use SQL on Azure VM.
+              </p>
+          
+              <h2>🔹 3. Optimize Before You Migrate — Not After</h2>
+              <p>
+                A migration is the perfect time to fix what’s been slowing you down. Before
+                copying a single byte to Azure, tune your on-prem environment.
+              </p>
+              <ul>
+                <li>Clean up unused tables, indexes, and jobs</li>
+                <li>Update outdated statistics</li>
+                <li>Archive old data to reduce migration volume</li>
+                <li>Normalize filegroups and tempdb setup</li>
+                <li>Resolve blocking or deadlock issues</li>
+              </ul>
+              <p>
+                By doing this upfront, you’ll move less data, reduce migration time, and
+                ensure your new Azure environment starts clean.
+              </p>
+          
+              <h2>🔹 4. Size and Configure for Performance</h2>
+              <p>
+                Don’t assume Azure SQL will automatically scale to your needs. Right-sizing
+                is critical for both performance and cost efficiency.
+              </p>
+              <ul>
+                <li>Use the <strong>Azure Pricing Calculator</strong> to estimate resources</li>
+                <li>Match I/O and vCore tiers based on workload baseline</li>
+                <li>Enable <strong>Read Scale-Out</strong> for read-heavy workloads</li>
+                <li>Use <strong>Premium SSD</strong> or Managed Disks for low latency</li>
+              </ul>
+              <p>
+                Start slightly above your current needs — then monitor and scale down once
+                stable.
+              </p>
+          
+              <h2>🔹 5. Plan Downtime or Go Hybrid (for Near-Zero Downtime)</h2>
+              <p>
+                Decide early: can your business tolerate downtime or not? For
+                non-critical systems, a simple offline migration using{" "}
+                <strong>Azure Database Migration Service (DMS)</strong> works fine. For
+                mission-critical workloads, use online migration with continuous data sync.
+              </p>
+              <p>
+                Keep your on-prem database online while DMS replicates data in real-time,
+                perform cutover when lag is minimal, and test applications before switching
+                connections. This hybrid approach minimizes disruption.
+              </p>
+          
+              <h2>🔹 6. Secure Everything — In Transit and At Rest</h2>
+              <p>
+                Security can’t be an afterthought. Apply the same or stricter standards as
+                your on-prem setup.
+              </p>
+              <ul>
+                <li>Use <strong>Private Link</strong> or <strong>ExpressRoute</strong></li>
+                <li>Encrypt data in transit (TLS 1.2) and at rest (TDE)</li>
+                <li>Enable <strong>Azure Defender for SQL</strong></li>
+                <li>Implement <strong>Azure AD authentication</strong> and least-privilege roles</li>
+                <li>Restrict access via firewall and network rules</li>
+              </ul>
+          
+              <h2>🔹 7. Validate Performance After Migration</h2>
+              <p>
+                Don’t assume “it just works.” Once your data lands in Azure, test
+                everything thoroughly.
+              </p>
+              <ul>
+                <li>Validate row counts, schema, and constraints</li>
+                <li>Benchmark queries against pre-migration baselines</li>
+                <li>Monitor with <strong>Azure Monitor</strong> and <strong>Query Performance Insight</strong></li>
+                <li>Identify regressions caused by query plan changes</li>
+              </ul>
+          
+              <h2>🔹 8. Automate Backups, Maintenance, and Monitoring</h2>
+              <p>
+                Azure SQL simplifies a lot — but you still need proactive management.
+              </p>
+              <ul>
+                <li>Enable automated backups with long-term retention</li>
+                <li>Schedule index and stats maintenance using Azure Automation</li>
+                <li>Set alerts for slow queries, blocking, and DTU spikes</li>
+              </ul>
+              <p>
+                Modern DBAs focus on observability — automate the routine so you can focus
+                on optimization.
+              </p>
+          
+              <h2>🔹 9. Optimize for Cost and Scale</h2>
+              <p>
+                Once everything’s stable, optimize for cost. Azure gives you tools to pay
+                only for what you use.
+              </p>
+              <ul>
+                <li>Use <strong>Auto-Pause</strong> for serverless workloads</li>
+                <li>Enable <strong>Auto-Scale</strong> for variable workloads</li>
+                <li>Scale down during off-hours for non-prod systems</li>
+                <li>Review <strong>Azure Cost Management + Advisor</strong> monthly</li>
+              </ul>
+          
+              <h2>💡 Final Thoughts</h2>
+              <p>
+                Migrating to Azure SQL isn’t just a technical move — it’s a mindset shift.
+                It’s about trading constant firefighting for automation, visibility, and
+                scalability.
+              </p>
+              <p>
+                The key? Assess deeply, plan realistically, migrate securely, and validate
+                relentlessly. When done right, you’ll not only move your databases — you’ll
+                move your business into a more predictable, modern future.
+              </p>
+          
+              {/* About the Author */}
+              <div className="mt-16 p-6 border border-gray-200 rounded-2xl bg-gray-50">
+                <h3 className="text-xl font-semibold mb-3">About the Author</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  <strong>Rex Dev</strong> is the founder of <strong>Nexserv Consulting</strong>, 
+                  a BC-based data engineering and analytics firm helping businesses modernize 
+                  their data platforms with Microsoft SQL Server, SSIS, and Azure. 
+                  With over 22 years of industry experience, he specializes in database performance 
+                  optimization, cloud migration, and enterprise data integration.
+                </p>
+                <p className="text-gray-600 mt-3">
+                  Connect with Rex on{" "}
+                  <a
+                    href="https://www.linkedin.com/in/rexdev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
+                    LinkedIn
+                  </a>{" "}
+                  for more insights on SQL performance, Azure architecture, and automation best practices.
+                </p>
+              </div>
+            </article>
           )}
+
           
           {post.slug === "sql-server-performance-optimization" && (
             <>
@@ -196,6 +371,28 @@ const BlogPost = () => {
               </p>
             </>
           )}
+          <div className="mt-16 p-6 border border-gray-200 rounded-2xl bg-gray-50">
+          <h3 className="text-xl font-semibold mb-3">About the Author</h3>
+          <p className="text-gray-700 leading-relaxed">
+            <strong>Rex Dev</strong> is a seasoned Data Engineer and SQL Server specialist based in British Columbia, Canada, 
+            with over 22 years of experience in database performance optimization, data integration, and enterprise system design. 
+            He has led data modernization projects across finance, healthcare, and technology sectors — helping teams 
+            build reliable, high-performing data platforms using Microsoft SQL Server, SSIS, and Azure.
+          </p>
+          <p className="text-gray-600 mt-3">
+            Connect with Rex on{" "}
+            <a
+              href="https://www.linkedin.com/in/rexdev" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              LinkedIn
+            </a>{" "}
+            for insights on SQL performance tuning, data architecture, and automation best practices.
+          </p>
+        </div>
+
           
           {post.slug === "enterprise-data-migration-strategies" && (
             <>
@@ -295,28 +492,6 @@ const BlogPost = () => {
               </ul>
             </>
           )}
-          
-          <div className="mt-16 p-6 border border-border rounded-2xl bg-secondary/30">
-            <h3 className="text-xl font-semibold mb-3 text-foreground">About the Author</h3>
-            <p className="text-foreground leading-relaxed">
-              <strong>Rex Dev</strong> is a seasoned Data Engineer and SQL Server specialist based in British Columbia, Canada, 
-              with over 22 years of experience in database performance optimization, data integration, and enterprise system design. 
-              He has led data modernization projects across finance, healthcare, and technology sectors — helping teams 
-              build reliable, high-performing data platforms using Microsoft SQL Server, SSIS, and Azure.
-            </p>
-            <p className="text-muted-foreground mt-3">
-              Connect with Rex on{" "}
-              <a
-                href="https://www.linkedin.com/in/rexdev" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                LinkedIn
-              </a>{" "}
-              for insights on SQL performance tuning, data architecture, and automation best practices.
-            </p>
-          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t">
