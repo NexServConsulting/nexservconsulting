@@ -65,7 +65,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="NexServ Consulting" className="h-12 w-auto max-w-md" />
+            <img src={logo} alt="NexServ Consulting" className="h-12 w-auto max-w-md logo-adaptive" />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

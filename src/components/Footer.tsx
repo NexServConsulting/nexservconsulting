@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <img src={logo} alt="NexServ Consulting" className="h-12 w-auto" />
+            <img src={logo} alt="NexServ Consulting" className="h-12 w-auto logo-adaptive" />
             <p className="text-sm text-muted-foreground">
               Expert data management and optimization solutions for modern businesses.
             </p>
