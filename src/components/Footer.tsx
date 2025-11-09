@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} NexServ Consulting Inc. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NexServ Consulting. All rights reserved.</p>
         </div>
       </div>
     </footer>
