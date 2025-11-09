@@ -79,7 +79,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-sm text-muted-foreground">New York, NY 10001</p>
+                      <p className="text-sm text-muted-foreground">BC, Canada</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -97,9 +97,7 @@ const Contact = () => {
               <Card className="bg-gradient-to-br from-primary to-accent text-white">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Need Immediate Assistance?</h3>
-                  <p className="text-sm opacity-90 mb-4">
-                    For urgent matters, our support team is available 24/7.
-                  </p>
+                  <p className="text-sm opacity-90 mb-4">For urgent matters, our support team is available 24/7.</p>
                   <Button variant="secondary" className="w-full">
                     Emergency Support
                   </Button>
@@ -208,9 +206,9 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Visit Our Office</h2>
             <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
-              <img 
-                src={contactImage} 
-                alt="NexServ Consulting modern office workspace with data dashboards" 
+              <img
+                src={contactImage}
+                alt="NexServ Consulting modern office workspace with data dashboards"
                 className="w-full h-full object-cover"
               />
             </div>
