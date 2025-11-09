@@ -50,13 +50,13 @@ const StructuredData = () => {
   const serviceSchema: ServiceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Data Migration and Database Optimization",
+    serviceType: "Data Migration and Database Optimization Services",
     provider: {
       "@type": "Organization",
       name: "NexServ Consulting",
     },
     areaServed: "Worldwide",
-    description: "Professional data migration, database optimization, Azure SQL solutions, and data conversion services",
+    description: "Expert data migration, database optimization, Azure SQL solutions, SQL Server management, SSIS development, and MS Access modernization services for enterprise businesses",
   };
 
   return (

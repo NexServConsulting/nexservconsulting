@@ -13,6 +13,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import SEO from "@/components/SEO";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import blogImage from "@/assets/blog-insights.jpg";
 import { blogPosts, categories } from "@/data/blogPosts";
 
@@ -44,6 +45,12 @@ const Blog = () => {
         description="Expert insights on data migration, database optimization, Azure SQL, and cloud solutions. Stay updated with the latest trends and best practices in data management."
         keywords="data migration tips, database optimization guide, Azure SQL best practices, SQL Server performance, cloud data solutions"
         canonical="/blog"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" }
+        ]}
       />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -98,7 +105,7 @@ const Blog = () => {
                   <div className="h-48 overflow-hidden">
                     <img 
                       src={post.image} 
-                      alt={post.title} 
+                      alt={`${post.title} - ${post.category} guide and best practices`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

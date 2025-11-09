@@ -402,7 +402,11 @@ const Index = () => {
                 className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
                 <div className="h-48 overflow-hidden">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+                  <img 
+                    src={post.image} 
+                    alt={`${post.title} - ${post.category} insights and best practices for data management`}
+                    className="w-full h-full object-cover" 
+                  />
                 </div>
                 <CardHeader>
                   <Badge variant="secondary" className="w-fit mb-2">

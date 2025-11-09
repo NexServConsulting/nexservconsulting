@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import SEO from "@/components/SEO";
+import ArticleSchema from "@/components/ArticleSchema";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import NotFound from "./NotFound";
 
 const BlogPost = () => {
@@ -19,8 +21,30 @@ const BlogPost = () => {
       <SEO 
         title={post.title}
         description={post.excerpt}
-        keywords={`${post.category}, data management, database solutions`}
+        keywords={`${post.category}, data management, database solutions, ${post.title}`}
         canonical={`/blog/${post.slug}`}
+        ogType="article"
+        article={{
+          publishedTime: post.date,
+          author: "Rex Dev",
+          tags: [post.category, "data migration", "database optimization"]
+        }}
+      />
+      <ArticleSchema
+        title={post.title}
+        description={post.excerpt}
+        author="Rex Dev"
+        publishedDate={post.date}
+        image={post.image}
+        category={post.category}
+        url={`/blog/${post.slug}`}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: post.title, url: `/blog/${post.slug}` }
+        ]}
       />
       
       <article className="container mx-auto px-4 py-12 max-w-4xl">
@@ -49,7 +73,7 @@ const BlogPost = () => {
         <div className="mb-12 rounded-lg overflow-hidden">
           <img 
             src={post.image} 
-            alt={post.title}
+            alt={`${post.title} - comprehensive guide on ${post.category}`}
             className="w-full h-[400px] object-cover"
           />
         </div>
