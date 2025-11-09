@@ -97,9 +97,9 @@ const Contact = () => {
               <Card className="bg-gradient-to-br from-primary to-accent text-white">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Need Immediate Assistance?</h3>
-                  <p className="text-sm opacity-90 mb-4">For urgent matters, our support team is available 24/7.</p>
+                  <p className="text-sm opacity-90 mb-4">For urgent matters, contact our support team during business hours.</p>
                   <Button variant="secondary" className="w-full">
-                    Emergency Support
+                    Contact Support
                   </Button>
                 </CardContent>
               </Card>

@@ -33,7 +33,7 @@ const Home = () => {
     { value: "500+", label: "Projects Completed" },
     { value: "98%", label: "Client Satisfaction" },
     { value: "50+", label: "Enterprise Clients" },
-    { value: "24/7", label: "Support Available" },
+    { value: "15+", label: "Years Experience" },
   ];
 
   return (
@@ -126,7 +126,7 @@ const Home = () => {
                   "Expert team with 15+ years of experience",
                   "Proven track record with Fortune 500 companies",
                   "Cutting-edge technology stack",
-                  "24/7 dedicated support",
+                  "Dedicated support during business hours",
                   "Flexible engagement models",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
