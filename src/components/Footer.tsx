@@ -5,7 +5,7 @@ import logo from "@/assets/logo.png";
 const Footer = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     e.preventDefault();
-    
+
     if (path === "#home") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -33,10 +33,42 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" onClick={(e) => handleNavClick(e, "#home")} className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#services" onClick={(e) => handleNavClick(e, "#services")} className="text-sm text-muted-foreground hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#portfolio" onClick={(e) => handleNavClick(e, "#portfolio")} className="text-sm text-muted-foreground hover:text-primary transition-colors">Portfolio</a></li>
+              <li>
+                <a
+                  href="#home"
+                  onClick={(e) => handleNavClick(e, "#home")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  onClick={(e) => handleNavClick(e, "#about")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  onClick={(e) => handleNavClick(e, "#services")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  onClick={(e) => handleNavClick(e, "#portfolio")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Portfolio
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -63,17 +95,35 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin size={16} />
-                <span>New York, NY</span>
+                <span>BC, Canada</span>
               </li>
             </ul>
             <div className="flex gap-4 mt-4">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="X (Twitter)">
+              <a
+                href="https://www.x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="X (Twitter)"
+              >
                 <XIcon size={20} />
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin size={20} />
               </a>
             </div>
