@@ -204,7 +204,7 @@ const Index = () => {
               Solutions that reduce risk and scale with your growth.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Expert data management, migration, and optimization solutions powered by cutting-edge technology.
+              Professional data management, migration, and optimization built on proven, modern tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#services">
