@@ -77,6 +77,7 @@ const Index = () => {
 
   const services = [
     {
+      id: "data-migration",
       image: serviceDataMigration,
       title: "Data Migration Services",
       description: "Seamlessly migrate your data across platforms with our proven methodologies.",
@@ -84,6 +85,7 @@ const Index = () => {
       alt: "Professional working on data migration with multiple screens",
     },
     {
+      id: "data-conversion",
       image: serviceDataConversion,
       title: "Data Conversion",
       description: "Transform your data formats while maintaining structure and accuracy.",
@@ -91,6 +93,7 @@ const Index = () => {
       alt: "Team analyzing data conversion and transformation",
     },
     {
+      id: "database-optimization",
       image: serviceDatabaseOptimization,
       title: "Database Optimization",
       description: "Enhance performance and efficiency of your database infrastructure.",
@@ -98,6 +101,7 @@ const Index = () => {
       alt: "Professionals reviewing database performance metrics",
     },
     {
+      id: "azure-sql",
       image: serviceAzureSQL,
       title: "Azure SQL Solutions",
       description: "Leverage the power of cloud computing for your data infrastructure.",
@@ -105,6 +109,7 @@ const Index = () => {
       alt: "Team working with Azure cloud solutions and dashboards",
     },
     {
+      id: "excel-access",
       image: serviceExcelAccess,
       title: "Excel & Access Solutions",
       description: "Modernize and optimize your Excel and Access applications.",
@@ -112,6 +117,7 @@ const Index = () => {
       alt: "Professional working with Excel spreadsheets",
     },
     {
+      id: "sql-server-ssis",
       image: serviceSQLServer,
       title: "SQL Server & SSIS",
       description: "Expert implementation and management of SQL Server solutions.",
@@ -328,7 +334,7 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
                         <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
@@ -336,6 +342,11 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
+                  <Link to={`/services/${service.id}`}>
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      Learn More
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
