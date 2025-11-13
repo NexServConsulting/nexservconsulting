@@ -72,7 +72,7 @@ export const serviceDetails: ServiceDetail[] = [
         tier: "Small Projects",
         price: "Starting at $5,000",
         features: [
-          "Up to 100GB data per instance",
+          "Up to 100GB data",
           "Single database migration",
           "Row-count and schema validation",
           "Up to 3 weeks support",
