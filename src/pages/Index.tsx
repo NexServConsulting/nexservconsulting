@@ -44,6 +44,7 @@ import serviceDatabaseOptimization from "@/assets/service-database-optimization.
 import serviceAzureSQL from "@/assets/service-azure-sql.jpg";
 import serviceExcelAccess from "@/assets/service-excel-access.jpg";
 import serviceSQLServer from "@/assets/service-sql-server.jpg";
+import serviceWebDevelopment from "@/assets/service-web-development.jpg";
 import { blogPosts } from "@/data/blogPosts";
 
 const Index = () => {
@@ -123,6 +124,14 @@ const Index = () => {
       description: "Expert implementation and management of SQL Server solutions.",
       features: ["ETL development", "Package optimization", "Server management"],
       alt: "Team managing SQL Server infrastructure and monitoring",
+    },
+    {
+      id: "web-development",
+      image: serviceWebDevelopment,
+      title: "Web Development",
+      description: "Build modern, responsive web applications tailored to your business needs.",
+      features: ["Custom web applications", "Responsive design", "Modern frameworks"],
+      alt: "Professional web development workspace with modern design",
     },
   ];
 
