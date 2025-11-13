@@ -75,7 +75,7 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-base md:text-lg lg:text-xl font-medium transition-colors hover:text-primary text-foreground/90"
+                  className="text-base md:text-[0.844rem] lg:text-xl font-medium transition-colors hover:text-primary text-foreground/90"
                 >
                   {link.name}
                 </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
                   key={link.path}
                   href={link.path}
                   onClick={(e) => handleNavClick(e, link.path, link.isRoute)}
-                  className="text-base md:text-lg lg:text-xl font-medium transition-colors hover:text-primary text-foreground/90"
+                  className="text-base md:text-[0.844rem] lg:text-xl font-medium transition-colors hover:text-primary text-foreground/90"
                 >
                   {link.name}
                 </a>
