@@ -113,8 +113,8 @@ const Index = () => {
     {
       id: "excel-access",
       image: serviceExcelAccess,
-      title: "Excel & Access Solutions",
-      description: "Modernize and optimize your Excel and Access applications.",
+      title: "Excel & MS Access Solutions",
+      description: "Modernize and optimize your Excel and MS Access applications.",
       features: ["Application development", "Automation solutions", "Integration services"],
       alt: "Professional working with Excel spreadsheets",
     },
@@ -166,7 +166,7 @@ const Index = () => {
       title: "Enterprise Data Migration",
       client: "Fortune 500 Manufacturing Company",
       description:
-        "Migrated 10+ years of legacy data from multiple Access databases to Azure SQL, improving query performance by 400%.",
+        "Migrated 10+ years of legacy data from multiple MS Access databases to Azure SQL, improving query performance by 400%.",
       technologies: ["MS Access", "Azure SQL", "SSIS", "PowerBI"],
     },
     {
