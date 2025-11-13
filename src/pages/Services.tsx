@@ -7,6 +7,7 @@ import servicesImage from "@/assets/services-infrastructure.jpg";
 const Services = () => {
   const services = [
     {
+      id: "data-migration",
       icon: Database,
       title: "Data Migration Services",
       description: "Seamlessly migrate your data across platforms with our proven methodologies.",
@@ -18,6 +19,7 @@ const Services = () => {
       ],
     },
     {
+      id: "data-conversion",
       icon: RefreshCw,
       title: "Data Conversion",
       description: "Transform your data formats while maintaining structure and accuracy.",
@@ -29,6 +31,7 @@ const Services = () => {
       ],
     },
     {
+      id: "database-optimization",
       icon: TrendingUp,
       title: "Database Optimization",
       description: "Enhance performance and efficiency of your database infrastructure.",
@@ -40,6 +43,7 @@ const Services = () => {
       ],
     },
     {
+      id: "azure-sql",
       icon: Cloud,
       title: "Azure SQL Solutions",
       description: "Leverage the power of cloud computing for your data infrastructure.",
@@ -51,6 +55,7 @@ const Services = () => {
       ],
     },
     {
+      id: "excel-access",
       icon: FileSpreadsheet,
       title: "Excel & Access Solutions",
       description: "Modernize and optimize your Excel and Access applications.",
@@ -62,6 +67,7 @@ const Services = () => {
       ],
     },
     {
+      id: "sql-server-ssis",
       icon: Server,
       title: "SQL Server & SSIS",
       description: "Expert implementation and management of SQL Server solutions.",
@@ -73,6 +79,7 @@ const Services = () => {
       ],
     },
     {
+      id: "web-development",
       icon: Globe,
       title: "Web Development",
       description: "Custom web applications built with modern technologies and best practices.",
@@ -121,7 +128,7 @@ const Services = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm">
                         <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
@@ -129,6 +136,11 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
+                  <Link to={`/services/${service.id}`}>
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      Learn More
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
