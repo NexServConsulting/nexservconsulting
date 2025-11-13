@@ -48,13 +48,14 @@ const Services = () => {
       description: "Modernize and optimize your Excel and Access applications.",
       features: ["Application development", "Automation solutions", "Integration services", "Training and support"],
     },
-    {
-      id: "sql-server-ssis",
-      icon: Server,
-      title: "SQL Server & SSIS",
-      description: "Expert implementation and management of SQL Server solutions.",
-      features: ["ETL development", "Package optimization", "Server management", "Integration services"],
-    },
+    // SQL Server & SSIS - hidden
+    // {
+    //   id: "sql-server-ssis",
+    //   icon: Server,
+    //   title: "SQL Server & SSIS",
+    //   description: "Expert implementation and management of SQL Server solutions.",
+    //   features: ["ETL development", "Package optimization", "Server management", "Integration services"],
+    // },
     {
       id: "web-development",
       icon: Globe,

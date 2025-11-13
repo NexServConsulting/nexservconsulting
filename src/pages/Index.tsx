@@ -118,14 +118,15 @@ const Index = () => {
       features: ["Application development", "Automation solutions", "Integration services"],
       alt: "Professional working with Excel spreadsheets",
     },
-    {
-      id: "sql-server-ssis",
-      image: serviceSQLServer,
-      title: "SQL Server & SSIS",
-      description: "Expert implementation and management of SQL Server solutions.",
-      features: ["ETL development", "Package optimization", "Server management"],
-      alt: "Team managing SQL Server infrastructure and monitoring",
-    },
+    // SQL Server & SSIS - hidden
+    // {
+    //   id: "sql-server-ssis",
+    //   image: serviceSQLServer,
+    //   title: "SQL Server & SSIS",
+    //   description: "Expert implementation and management of SQL Server solutions.",
+    //   features: ["ETL development", "Package optimization", "Server management"],
+    //   alt: "Team managing SQL Server infrastructure and monitoring",
+    // },
     {
       id: "web-development",
       image: serviceWebDevelopment,
@@ -331,11 +332,11 @@ const Index = () => {
               Comprehensive data solutions tailored to meet your specific business needs.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                className="group bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden w-full max-w-sm"
               >
                 <div className="h-48 overflow-hidden">
                   <img
