@@ -70,7 +70,7 @@ export const serviceDetails: ServiceDetail[] = [
     pricing: [
       {
         tier: "Small Projects",
-        price: "Starting at $5,000",
+        price: "Starting at $3,000",
         features: [
           "Up to 100GB data",
           "Single database migration",
@@ -80,7 +80,7 @@ export const serviceDetails: ServiceDetail[] = [
       },
       {
         tier: "Medium Projects",
-        price: "Starting at $15,000",
+        price: "Starting at $10,000",
         features: [
           "Up to 250GB data",
           "Multiple database migration",
