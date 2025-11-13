@@ -22,11 +22,12 @@ const Home = () => {
       title: "Database Optimization",
       description: "Enhance performance and scalability of your database infrastructure.",
     },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Migrate to Azure SQL and leverage cloud capabilities for modern data management.",
-    },
+    // Azure SQL Solutions - hidden
+    // {
+    //   icon: Cloud,
+    //   title: "Cloud Solutions",
+    //   description: "Migrate to Azure SQL and leverage cloud capabilities for modern data management.",
+    // },
   ];
 
   const stats = [
