@@ -79,6 +79,7 @@ const Footer = () => {
               <li className="text-sm text-muted-foreground">Database Optimization</li>
               <li className="text-sm text-muted-foreground">Data Conversion</li>
               <li className="text-sm text-muted-foreground">Cloud Solutions</li>
+              <li className="text-sm text-muted-foreground">Web Development</li>
             </ul>
           </div>
 

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server, ArrowRight } from "lucide-react";
+import { Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server, ArrowRight, Globe } from "lucide-react";
 import servicesImage from "@/assets/services-infrastructure.jpg";
 
 const Services = () => {
@@ -70,6 +70,17 @@ const Services = () => {
         "Package optimization",
         "Server management",
         "Integration services",
+      ],
+    },
+    {
+      icon: Globe,
+      title: "Web Development",
+      description: "Custom web applications built with modern technologies and best practices.",
+      features: [
+        "Responsive design",
+        "Full-stack development",
+        "API integration",
+        "Performance optimization",
       ],
     },
   ];

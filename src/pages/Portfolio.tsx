@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Building2, ShoppingCart, Heart, Landmark } from "lucide-react";
+import { Building2, ShoppingCart, Heart, Landmark, Globe } from "lucide-react";
 import portfolioImage from "@/assets/portfolio-migration.jpg";
 
 const Portfolio = () => {
@@ -36,6 +36,14 @@ const Portfolio = () => {
       description: "Built comprehensive data warehouse for financial analytics and reporting with real-time capabilities.",
       technologies: ["Azure SQL", "Data Warehouse", "SSAS"],
       results: ["Real-time analytics", "Enhanced reporting", "Better decision making"],
+    },
+    {
+      icon: Globe,
+      title: "Custom Web Application",
+      client: "Tech Startup",
+      description: "Developed a full-stack web application with modern UI and seamless database integration.",
+      technologies: ["React", "TypeScript", "SQL Server", "REST API"],
+      results: ["Improved user engagement", "Scalable architecture", "Responsive design"],
     },
   ];
 
