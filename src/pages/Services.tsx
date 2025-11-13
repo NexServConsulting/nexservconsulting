@@ -33,13 +33,14 @@ const Services = () => {
       description: "Enhance performance and efficiency of your database infrastructure.",
       features: ["Query optimization", "Index tuning", "Performance monitoring", "Scalability planning"],
     },
-    {
-      id: "azure-sql",
-      icon: Cloud,
-      title: "Azure SQL Solutions",
-      description: "Leverage the power of cloud computing for your data infrastructure.",
-      features: ["Cloud migration", "Hybrid solutions", "Security implementation", "Cost optimization"],
-    },
+    // Azure SQL Solutions - hidden
+    // {
+    //   id: "azure-sql",
+    //   icon: Cloud,
+    //   title: "Azure SQL Solutions",
+    //   description: "Leverage the power of cloud computing for your data infrastructure.",
+    //   features: ["Cloud migration", "Hybrid solutions", "Security implementation", "Cost optimization"],
+    // },
     {
       id: "excel-access",
       icon: FileSpreadsheet,
