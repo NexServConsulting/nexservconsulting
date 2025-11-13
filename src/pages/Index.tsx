@@ -255,8 +255,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-foreground">About NexServ Consulting</h2>
             <p className="text-xl text-muted-foreground">
-              We're a team of data experts passionate about helping businesses unlock the full potential of their data
-              infrastructure.
+              We help small to medium businesses clean up, modernize, and stabilize their data systems. No drama, no confusion, no downtime surprises.
             </p>
           </div>
 
