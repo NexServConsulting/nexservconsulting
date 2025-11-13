@@ -201,7 +201,7 @@ const Index = () => {
         <div className="container mx-auto relative z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 text-white leading-tight">
-              Transform Your Data Infrastructure
+              Solutions that reduce risk, improve efficiency, and scale with your growth.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
               Expert data management, migration, and optimization solutions powered by cutting-edge technology.
