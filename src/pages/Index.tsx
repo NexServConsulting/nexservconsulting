@@ -101,14 +101,15 @@ const Index = () => {
       features: ["Query optimization", "Index tuning", "Performance monitoring"],
       alt: "Professionals reviewing database performance metrics",
     },
-    {
-      id: "azure-sql",
-      image: serviceAzureSQL,
-      title: "Azure SQL Solutions",
-      description: "Leverage the power of cloud computing for your data infrastructure.",
-      features: ["Cloud migration", "Hybrid solutions", "Security implementation"],
-      alt: "Team working with Azure cloud solutions and dashboards",
-    },
+    // Azure SQL Solutions - hidden
+    // {
+    //   id: "azure-sql",
+    //   image: serviceAzureSQL,
+    //   title: "Azure SQL Solutions",
+    //   description: "Leverage the power of cloud computing for your data infrastructure.",
+    //   features: ["Cloud migration", "Hybrid solutions", "Security implementation"],
+    //   alt: "Team working with Azure cloud solutions and dashboards",
+    // },
     {
       id: "excel-access",
       image: serviceExcelAccess,
