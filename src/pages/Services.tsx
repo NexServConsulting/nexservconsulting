@@ -44,8 +44,8 @@ const Services = () => {
     {
       id: "excel-access",
       icon: FileSpreadsheet,
-      title: "Excel & Access Solutions",
-      description: "Modernize and optimize your Excel and Access applications.",
+      title: "Excel & MS Access Solutions",
+      description: "Modernize and optimize your Excel and MS Access applications.",
       features: ["Application development", "Automation solutions", "Integration services", "Training and support"],
     },
     // SQL Server & SSIS - hidden
@@ -69,8 +69,8 @@ const Services = () => {
     <>
       <SEO
         title="Our Services"
-        description="Comprehensive data solutions including data migration, database optimization, Azure SQL, SQL Server & SSIS, Excel & Access solutions, data conversion, and web development services."
-        keywords="data migration services, database optimization, Azure SQL solutions, SQL Server consulting, SSIS development, data conversion, Excel automation, Access database migration, web development, ETL services, cloud migration, database performance tuning"
+        description="Comprehensive data solutions including data migration, database optimization, Azure SQL, SQL Server & SSIS, Excel & MS Access solutions, data conversion, and web development services."
+        keywords="data migration services, database optimization, Azure SQL solutions, SQL Server consulting, SSIS development, data conversion, Excel automation, MS Access database migration, web development, ETL services, cloud migration, database performance tuning"
         canonical="/services"
       />
       <div className="min-h-screen pt-20">
