@@ -207,12 +207,12 @@ const Index = () => {
               Professional data management, migration, and optimization built on proven, modern tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#services">
+              <Link to="/services">
                 <Button size="lg" className="text-lg px-8 py-6">
                   Explore Services
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-              </a>
+              </Link>
               <a href="#contact">
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2">
                   Get in Touch
