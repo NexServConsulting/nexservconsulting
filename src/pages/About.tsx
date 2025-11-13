@@ -55,10 +55,13 @@ const About = () => {
               <h2 className="text-3xl font-bold">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Recently founded by industry veterans with a vision to simplify complex data challenges, NexServ Consulting brings decades of collective experience to every project. Our journey began with a simple belief: that every organization deserves access to world-class data management solutions, delivered with the agility of a modern firm and the wisdom of seasoned experts.
+                  NexServ Consulting was founded by senior data engineers with decades of hands-on experience fixing SQL Server performance issues, migrating legacy systems to Azure, and building reliable data pipelines that teams can trust.
                 </p>
                 <p>
-                  Today, we serve clients ranging from startups to Fortune 500 companies, helping them migrate, optimize, and manage their data infrastructure with confidence.
+                  We’ve been in the trenches with messy databases, slow queries, broken ETL pipelines, and painful Excel workflows. We know exactly how to turn unstable systems into stable ones.
+                </p>
+                <p>
+                  Today, we work with clients across industries, helping them migrate, optimize, and manage their data infrastructure with confidence.
                 </p>
               </div>
             </div>
