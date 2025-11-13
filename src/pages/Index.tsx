@@ -82,7 +82,7 @@ const Index = () => {
       image: serviceDataMigration,
       title: "Data Migration Services",
       description: "Seamlessly migrate your data across platforms with our proven methodologies.",
-      features: ["Zero downtime migration", "Cross-platform transfer", "Data integrity verification"],
+      features: ["Minimal downtime migration", "Cross-platform transfer", "Data integrity verification"],
       alt: "Professional working on data migration with multiple screens",
     },
     {
@@ -204,7 +204,10 @@ const Index = () => {
       />
       <FloatingActions />
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 sm:pt-16 md:pt-0">
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 sm:pt-16 md:pt-0"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-background via-[hsl(192,60%,12%)] to-[hsl(220,50%,15%)]" />
         <div className="absolute inset-0">
           <img
@@ -270,7 +273,8 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-foreground">About NexServ Consulting</h2>
             <p className="text-xl text-muted-foreground">
-              We help small to medium businesses clean up, modernize, and stabilize their data systems. No drama, no confusion, no downtime surprises.
+              We help small to medium businesses clean up, modernize, and stabilize their data systems. No drama, no
+              confusion, no downtime surprises.
             </p>
           </div>
 
@@ -281,16 +285,17 @@ const Index = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-foreground">Our Story</h3>
               <p className="text-muted-foreground text-lg">
-                NexServ Consulting was founded by senior data engineers with decades of hands-on experience fixing 
-                SQL Server performance issues, migrating legacy systems to Azure, and building reliable data pipelines that teams can trust.
+                NexServ Consulting was founded by senior data engineers with decades of hands-on experience fixing SQL
+                Server performance issues, migrating legacy systems to Azure, and building reliable data pipelines that
+                teams can trust.
               </p>
               <p className="text-muted-foreground text-lg">
-                We’ve been in the trenches with messy databases, slow queries, broken ETL pipelines, and painful Excel workflows. 
-                We know exactly how to turn unstable systems into stable ones.
+                We’ve been in the trenches with messy databases, slow queries, broken ETL pipelines, and painful Excel
+                workflows. We know exactly how to turn unstable systems into stable ones.
               </p>
               <p className="text-muted-foreground text-lg">
-                Today, we work with clients across industries, helping them migrate, optimize, 
-                and manage their data infrastructure with confidence.
+                Today, we work with clients across industries, helping them migrate, optimize, and manage their data
+                infrastructure with confidence.
               </p>
             </div>
           </div>
@@ -332,8 +337,8 @@ const Index = () => {
                 className="group bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={service.image} 
+                  <img
+                    src={service.image}
                     alt={service.alt}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                   />
@@ -352,7 +357,10 @@ const Index = () => {
                     ))}
                   </ul>
                   <Link to={`/services/${service.id}`}>
-                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                    >
                       Learn More
                     </Button>
                   </Link>
@@ -423,10 +431,10 @@ const Index = () => {
                 className="bg-card border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={post.image} 
+                  <img
+                    src={post.image}
                     alt={`${post.title} - ${post.category} insights and best practices for data management`}
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <CardHeader>
