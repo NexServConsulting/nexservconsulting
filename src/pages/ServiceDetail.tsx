@@ -5,9 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, ArrowRight, ArrowLeft } from "lucide-react";
+import { Check, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { getServiceById } from "@/data/serviceDetails";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import SEO from "@/components/SEO";
 
@@ -24,9 +24,44 @@ const ServiceDetail = () => {
     message: "",
   });
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [serviceId]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollContainerRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+        setShowLeftArrow(scrollLeft > 0);
+        setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
+      }
+    };
+
+    const container = scrollContainerRef.current;
+    if (container) {
+      handleScroll();
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }
+  }, [service]);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 300;
+      const newScrollLeft = direction === 'left' 
+        ? scrollContainerRef.current.scrollLeft - scrollAmount
+        : scrollContainerRef.current.scrollLeft + scrollAmount;
+      
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   if (!service) {
     return <Navigate to="/404" replace />;
@@ -123,18 +158,44 @@ const ServiceDetail = () => {
       <section className="py-20 px-4 bg-secondary/50">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Process</h2>
-          <div className="flex gap-6 overflow-x-auto pb-4">
-            {service.processSteps.map((step, index) => (
-              <Card key={index} className="flex-1 min-w-[240px]">
-                <CardHeader>
-                  <div className="text-4xl font-bold text-primary/20 mb-2">{String(index + 1).padStart(2, '0')}</div>
-                  <CardTitle className="text-xl">{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="relative">
+            {showLeftArrow && (
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full shadow-lg bg-background hover:bg-accent"
+                onClick={() => scroll('left')}
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </Button>
+            )}
+            <div 
+              ref={scrollContainerRef}
+              className="flex gap-6 overflow-x-auto pb-4 scroll-smooth scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {service.processSteps.map((step, index) => (
+                <Card key={index} className="flex-1 min-w-[240px] animate-fade-in">
+                  <CardHeader>
+                    <div className="text-4xl font-bold text-primary/20 mb-2">{String(index + 1).padStart(2, '0')}</div>
+                    <CardTitle className="text-xl">{step.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            {showRightArrow && (
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full shadow-lg bg-background hover:bg-accent"
+                onClick={() => scroll('right')}
+              >
+                <ChevronRight className="h-5 w-5" />
+              </Button>
+            )}
           </div>
         </div>
       </section>
