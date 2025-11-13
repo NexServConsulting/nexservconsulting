@@ -266,13 +266,15 @@ const Index = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-foreground">Our Story</h3>
               <p className="text-muted-foreground text-lg">
-                Recently founded by industry veterans, NexServ Consulting brings decades of experience in data
-                management to businesses across industries. We specialize in Microsoft technologies including Excel, MS
-                Access, SQL Server, SSIS, and Azure SQL — combining deep technical expertise with fresh, innovative
-                approaches.
+                NexServ Consulting was founded by senior data engineers with decades of hands-on experience fixing 
+                SQL Server performance issues, migrating legacy systems to Azure, and building reliable data pipelines that teams can trust.
               </p>
               <p className="text-muted-foreground text-lg">
-                Today, we serve clients ranging from startups to Fortune 500 companies, helping them migrate, optimize,
+                We’ve been in the trenches with messy databases, slow queries, broken ETL pipelines, and painful Excel workflows. 
+                We know exactly how to turn unstable systems into stable ones.
+              </p>
+              <p className="text-muted-foreground text-lg">
+                Today, we work with clients across industries, helping them migrate, optimize, 
                 and manage their data infrastructure with confidence.
               </p>
             </div>
