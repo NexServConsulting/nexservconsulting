@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, ArrowRight, ArrowLeft } from "lucide-react";
 import { getServiceById } from "@/data/serviceDetails";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import SEO from "@/components/SEO";
 
@@ -23,6 +23,10 @@ const ServiceDetail = () => {
     phone: "",
     message: "",
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [serviceId]);
 
   if (!service) {
     return <Navigate to="/404" replace />;
