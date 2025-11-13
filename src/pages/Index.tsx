@@ -189,7 +189,7 @@ const Index = () => {
       />
       <FloatingActions />
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-32 sm:pt-20 md:pt-0">
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 sm:pt-16 md:pt-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-[hsl(192,60%,12%)] to-[hsl(220,50%,15%)]" />
         <div className="absolute inset-0">
           <img
