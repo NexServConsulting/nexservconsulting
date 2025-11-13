@@ -123,9 +123,9 @@ const ServiceDetail = () => {
       <section className="py-20 px-4 bg-secondary/50">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Process</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex gap-6 overflow-x-auto pb-4">
             {service.processSteps.map((step, index) => (
-              <Card key={index}>
+              <Card key={index} className="flex-1 min-w-[240px]">
                 <CardHeader>
                   <div className="text-4xl font-bold text-primary/20 mb-2">{String(index + 1).padStart(2, '0')}</div>
                   <CardTitle className="text-xl">{step.title}</CardTitle>
