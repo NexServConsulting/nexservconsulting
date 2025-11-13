@@ -626,5 +626,9 @@ export const serviceDetails: ServiceDetail[] = [
 ];
 
 export const getServiceById = (id: string): ServiceDetail | undefined => {
+  // Hide Azure SQL Solutions
+  if (id === "azure-sql") {
+    return undefined;
+  }
   return serviceDetails.find((service) => service.id === id);
 };
