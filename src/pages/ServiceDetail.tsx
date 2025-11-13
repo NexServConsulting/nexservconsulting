@@ -9,6 +9,7 @@ import { Check, ArrowRight, ArrowLeft } from "lucide-react";
 import { getServiceById } from "@/data/serviceDetails";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import SEO from "@/components/SEO";
 
 const ServiceDetail = () => {
   const { serviceId } = useParams<{ serviceId: string }>();
@@ -42,8 +43,26 @@ const ServiceDetail = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Generate SEO metadata based on service
+  const generateKeywords = () => {
+    const baseKeywords = "NexServ Consulting, data services";
+    const serviceKeywords = service.features.join(", ").toLowerCase();
+    return `${service.title}, ${baseKeywords}, ${serviceKeywords}`;
+  };
+
+  const generateDescription = () => {
+    return `${service.longDescription} Services include: ${service.features.slice(0, 3).join(", ")}. Contact us for a quote.`;
+  };
+
   return (
-    <div className="min-h-screen pt-20">
+    <>
+      <SEO
+        title={service.title}
+        description={generateDescription()}
+        keywords={generateKeywords()}
+        canonical={`/services/${serviceId}`}
+      />
+      <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="container mx-auto">
@@ -262,6 +281,7 @@ const ServiceDetail = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

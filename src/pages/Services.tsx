@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server, ArrowRight, Globe } from "lucide-react";
 import servicesImage from "@/assets/services-infrastructure.jpg";
+import SEO from "@/components/SEO";
 
 const Services = () => {
   const services = [
@@ -93,7 +94,14 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <>
+      <SEO
+        title="Our Services"
+        description="Comprehensive data solutions including data migration, database optimization, Azure SQL, SQL Server & SSIS, Excel & Access solutions, data conversion, and web development services."
+        keywords="data migration services, database optimization, Azure SQL solutions, SQL Server consulting, SSIS development, data conversion, Excel automation, Access database migration, web development, ETL services, cloud migration, database performance tuning"
+        canonical="/services"
+      />
+      <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0">
@@ -191,6 +199,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
