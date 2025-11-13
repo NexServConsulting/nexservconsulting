@@ -34,7 +34,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-5xl font-bold mb-6">About NexServ Consulting</h1>
             <p className="text-xl text-muted-foreground">
-              We help small to medium businesses clean up, modernize, and stabilize their data systems. No drama, no confusion, no downtime surprises..
+              We help small to medium businesses clean up, modernize, and stabilize their data systems. No drama, no confusion, no downtime surprises.
             </p>
           </div>
         </div>
