@@ -45,6 +45,7 @@ import serviceAzureSQL from "@/assets/service-azure-sql.jpg";
 import serviceExcelAccess from "@/assets/service-excel-access.jpg";
 import serviceSQLServer from "@/assets/service-sql-server.jpg";
 import serviceWebDevelopment from "@/assets/service-web-development.jpg";
+import serviceDatabaseMaintenance from "@/assets/service-database-maintenance.jpg";
 import { blogPosts } from "@/data/blogPosts";
 
 const Index = () => {
@@ -100,6 +101,14 @@ const Index = () => {
       description: "Enhance performance and efficiency of your database infrastructure.",
       features: ["Query optimization", "Index tuning", "Performance monitoring"],
       alt: "Professionals reviewing database performance metrics",
+    },
+    {
+      id: "database-maintenance",
+      image: serviceDatabaseMaintenance,
+      title: "Database Maintenance",
+      description: "Proactive maintenance and monitoring to keep your databases healthy and performant.",
+      features: ["Health checks", "Backup verification", "Proactive monitoring"],
+      alt: "Technician monitoring database health and performance metrics",
     },
     // Azure SQL Solutions - hidden
     // {
