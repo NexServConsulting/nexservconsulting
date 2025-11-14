@@ -260,28 +260,28 @@ const ServiceDetail = () => {
 
       {/* Our Clients Section - Only for Web Development */}
       {serviceId === "web-development" && (
-        <section className="py-20 px-4 bg-secondary/30">
+        <section className="py-20 px-4 bg-background">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">Our Clients</h2>
             <div className="relative overflow-hidden">
-              <div className="flex animate-scroll-left">
+              <div className="flex animate-scroll-left whitespace-nowrap">
                 {/* Duplicate the logos twice for seamless loop */}
                 {[...Array(2)].map((_, setIndex) => (
-                  <div key={setIndex} className="flex items-center gap-16 px-8">
+                  <div key={setIndex} className="flex items-center gap-24 px-12 flex-shrink-0">
                     <img
                       src={rapidofixerLogo}
                       alt="Rapidofixer"
-                      className="h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                      className="h-20 w-auto grayscale object-contain flex-shrink-0"
                     />
                     <img
                       src={anjdvLogo}
                       alt="ANJDV Cleaning & Maintenance Services"
-                      className="h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                      className="h-20 w-auto grayscale object-contain flex-shrink-0"
                     />
                     <img
                       src={mitsuiLogo}
                       alt="Mitsui"
-                      className="h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                      className="h-20 w-auto grayscale object-contain flex-shrink-0"
                     />
                   </div>
                 ))}
