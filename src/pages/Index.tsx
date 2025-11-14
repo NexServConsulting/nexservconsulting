@@ -243,8 +243,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section
+      {/* Stats Section - Hidden */}
+      {/* <section
         ref={statsSection.elementRef}
         className={`py-20 px-4 bg-card/50 transition-all duration-1000 ${statsSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
@@ -263,7 +263,7 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
       <section
