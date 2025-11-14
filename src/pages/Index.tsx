@@ -131,8 +131,8 @@ const Index = () => {
       id: "web-development",
       image: serviceWebDevelopment,
       title: "Web Development",
-      description: "Build modern, responsive web applications tailored to your business needs.",
-      features: ["Custom web applications", "Responsive design", "Modern frameworks"],
+      description: "Custom web applications built with modern technologies and best practices.",
+      features: ["Responsive design", "Full-stack development", "Modern frameworks"],
       alt: "Professional web development workspace with modern design",
     },
   ];
