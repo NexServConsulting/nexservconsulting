@@ -260,7 +260,7 @@ const ServiceDetail = () => {
 
       {/* Our Clients Section - Only for Web Development */}
       {serviceId === "web-development" && (
-        <section className="py-20 px-4 bg-background">
+        <section className="py-20 px-4 bg-white">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">Our Clients</h2>
             <div className="relative overflow-hidden">
