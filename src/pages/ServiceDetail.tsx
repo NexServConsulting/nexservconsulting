@@ -281,7 +281,7 @@ const ServiceDetail = () => {
                     <img
                       src={mitsuiLogo}
                       alt="Mitsui"
-                      className="h-20 w-auto grayscale object-contain flex-shrink-0"
+                      className="h-20 w-auto grayscale object-contain flex-shrink-0 bg-muted px-4 py-2 rounded"
                     />
                   </div>
                 ))}
