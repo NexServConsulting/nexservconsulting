@@ -548,7 +548,6 @@ export const serviceDetails: ServiceDetail[] = [
     features: [
       "Modern responsive UI",
       "Backend and full-stack development",
-      "API and system integration",
       "Database-driven functionality",
       "Performance and security best practices",
       "Deployment and environment setup",
