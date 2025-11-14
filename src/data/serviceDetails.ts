@@ -1,4 +1,4 @@
-import { Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server, Globe, LucideIcon } from "lucide-react";
+import { Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server, Globe, Wrench, LucideIcon } from "lucide-react";
 
 export interface ServiceDetail {
   id: string;
@@ -619,6 +619,102 @@ export const serviceDetails: ServiceDetail[] = [
       {
         question: "Do you provide hosting?",
         answer: "We can recommend and set up hosting solutions, or work with your existing infrastructure.",
+      },
+    ],
+  },
+  {
+    id: "database-maintenance",
+    icon: Wrench,
+    title: "Database Maintenance",
+    description: "Proactive maintenance and monitoring to keep your databases healthy and performant.",
+    longDescription: "Regular database maintenance prevents problems before they start. We provide scheduled maintenance services that include health checks, performance tuning, backup verification, and proactive monitoring. Keep your systems running smoothly with minimal interruption and maximum reliability.",
+    features: [
+      "Scheduled maintenance and health checks",
+      "Performance monitoring and tuning",
+      "Backup and recovery verification",
+      "Index maintenance and optimization",
+      "Storage and capacity planning",
+      "Proactive issue detection and resolution",
+    ],
+    benefits: [
+      "Prevent downtime before it happens",
+      "Maintain optimal database performance",
+      "Ensure backup reliability",
+      "Extend hardware lifecycle through proper maintenance",
+    ],
+    processSteps: [
+      {
+        title: "Initial Assessment",
+        description: "We evaluate your current database health, identify potential issues, and establish performance baselines to create a tailored maintenance plan.",
+      },
+      {
+        title: "Maintenance Plan",
+        description: "A customized maintenance schedule is created based on your business needs, including routine checks, optimization windows, and backup schedules.",
+      },
+      {
+        title: "Implementation",
+        description: "We execute the maintenance plan during your specified maintenance windows, ensuring minimal impact on operations.",
+      },
+      {
+        title: "Monitoring",
+        description: "Continuous monitoring tracks database health, performance metrics, and potential issues, with alerts for anything requiring attention.",
+      },
+      {
+        title: "Reporting",
+        description: "Regular reports keep you informed about database health, completed maintenance activities, and recommendations for improvements.",
+      },
+    ],
+    pricing: [
+      {
+        tier: "Basic Maintenance",
+        price: "Starting at $500/month",
+        features: [
+          "Monthly health checks",
+          "Basic performance monitoring",
+          "Backup verification",
+          "Email support",
+        ],
+      },
+      {
+        tier: "Standard Maintenance",
+        price: "Starting at $1,500/month",
+        features: [
+          "Weekly health checks",
+          "Advanced performance monitoring",
+          "Index optimization",
+          "Monthly reporting",
+          "Priority support",
+        ],
+        popular: true,
+      },
+      {
+        tier: "Premium Maintenance",
+        price: "Custom Quote",
+        features: [
+          "24/7 monitoring",
+          "Proactive optimization",
+          "Emergency response",
+          "Dedicated maintenance engineer",
+          "Custom SLA agreements",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How often should database maintenance be performed?",
+        answer: "It depends on your database size and usage patterns. We typically recommend weekly maintenance for active databases, with daily monitoring. Critical systems may require more frequent attention.",
+      },
+      {
+        question: "Will maintenance cause downtime?",
+        answer: "Most maintenance tasks can be performed with minimal or no downtime. We schedule intensive maintenance during your specified maintenance windows to minimize impact.",
+      },
+      {
+        question: "What happens if an issue is discovered?",
+        answer: "We immediately notify you and provide recommendations. Depending on your service tier, we can either resolve it on the spot or work with you to schedule the fix during a maintenance window.",
+      },
+      {
+        question: "Can you work with our existing monitoring tools?",
+        answer: "Yes, we can integrate with most monitoring systems or provide our own monitoring solution tailored to your needs.",
       },
     ],
   },
