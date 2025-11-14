@@ -10,6 +10,9 @@ import { getServiceById } from "@/data/serviceDetails";
 import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import SEO from "@/components/SEO";
+import rapidofixerLogo from "@/assets/client-rapidofixer.png";
+import anjdvLogo from "@/assets/client-anjdv.png";
+import mitsuiLogo from "@/assets/client-mitsui.png";
 
 const ServiceDetail = () => {
   const { serviceId } = useParams<{ serviceId: string }>();
@@ -254,6 +257,39 @@ const ServiceDetail = () => {
           </Accordion>
         </div>
       </section>
+
+      {/* Our Clients Section - Only for Web Development */}
+      {serviceId === "web-development" && (
+        <section className="py-20 px-4 bg-secondary/30">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">Our Clients</h2>
+            <div className="relative overflow-hidden">
+              <div className="flex animate-scroll-left">
+                {/* Duplicate the logos twice for seamless loop */}
+                {[...Array(2)].map((_, setIndex) => (
+                  <div key={setIndex} className="flex items-center gap-16 px-8">
+                    <img
+                      src={rapidofixerLogo}
+                      alt="Rapidofixer"
+                      className="h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                    />
+                    <img
+                      src={anjdvLogo}
+                      alt="ANJDV Cleaning & Maintenance Services"
+                      className="h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                    />
+                    <img
+                      src={mitsuiLogo}
+                      alt="Mitsui"
+                      className="h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Contact Form Section */}
       <section id="contact" className="py-20 px-4">
