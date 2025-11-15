@@ -268,21 +268,42 @@ const ServiceDetail = () => {
                 {/* Duplicate the logos twice for seamless loop */}
                 {[...Array(2)].map((_, setIndex) => (
                   <div key={setIndex} className="flex items-center gap-24 px-12 flex-shrink-0">
-                    <img
-                      src={rapidofixerLogo}
-                      alt="Rapidofixer"
-                      className="h-20 w-auto grayscale object-contain flex-shrink-0 opacity-30"
-                    />
-                    <img
-                      src={anjdvLogo}
-                      alt="ANJDV Cleaning & Maintenance Services"
-                      className="h-20 w-auto grayscale object-contain flex-shrink-0 opacity-30"
-                    />
-                    <img
-                      src={mitsuiLogo}
-                      alt="Mitsui"
-                      className="h-20 w-auto grayscale object-contain flex-shrink-0 bg-muted px-4 py-2 rounded opacity-30"
-                    />
+                    <a
+                      href="https://www.rapidofixer.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-20 flex-shrink-0"
+                    >
+                      <img
+                        src={rapidofixerLogo}
+                        alt="Rapidofixer"
+                        className="h-20 w-auto grayscale object-contain opacity-30 hover:opacity-60 transition-opacity duration-300"
+                      />
+                    </a>
+                    <a
+                      href="https://www.anjdvservices.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-20 flex-shrink-0"
+                    >
+                      <img
+                        src={anjdvLogo}
+                        alt="ANJDV Cleaning & Maintenance Services"
+                        className="h-20 w-auto grayscale object-contain opacity-30 hover:opacity-60 transition-opacity duration-300"
+                      />
+                    </a>
+                    <a
+                      href="https://www.mitsuihomecanada.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-20 flex-shrink-0"
+                    >
+                      <img
+                        src={mitsuiLogo}
+                        alt="Mitsui"
+                        className="h-20 w-auto grayscale object-contain bg-muted px-4 py-2 rounded opacity-30 hover:opacity-60 transition-opacity duration-300"
+                      />
+                    </a>
                   </div>
                 ))}
               </div>
