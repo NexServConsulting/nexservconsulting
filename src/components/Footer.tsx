@@ -48,7 +48,7 @@ const Footer = () => {
                   onClick={(e) => handleNavClick(e, "#about")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  About Us
+                  Company
                 </a>
               </li>
               <li>
@@ -66,7 +66,16 @@ const Footer = () => {
                   onClick={(e) => handleNavClick(e, "#portfolio")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Portfolio
+                  Work
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  onClick={(e) => handleNavClick(e, "#blog")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Blog
                 </a>
               </li>
             </ul>
