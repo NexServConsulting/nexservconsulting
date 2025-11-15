@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <img src={logo} alt="NexServ Consulting" className="h-12 w-auto logo-adaptive" />
-            <p className="text-sm text-muted-foreground text-center">
+            <p className="text-sm text-muted-foreground text-left">
               Data and design, in sync.
             </p>
           </div>
