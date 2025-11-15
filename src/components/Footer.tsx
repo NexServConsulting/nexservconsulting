@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="space-y-4">
             <img src={logo} alt="NexServ Consulting" className="h-12 w-auto logo-adaptive" />
             <p className="text-sm text-muted-foreground">
-              Expert data management and optimization solutions for modern businesses.
+              Data and design, in sync.
             </p>
           </div>
 
