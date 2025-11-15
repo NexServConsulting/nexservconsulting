@@ -218,7 +218,7 @@ const ServiceDetail = () => {
                     <Badge className="w-fit mb-2">Most Popular</Badge>
                   )}
                   <CardTitle className="text-2xl">{tier.tier}</CardTitle>
-                  <div className="text-3xl font-bold text-primary mt-4">{tier.price}</div>
+                  <div className="text-xs font-bold text-primary mt-4">{tier.price}</div>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
