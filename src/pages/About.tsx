@@ -58,7 +58,7 @@ const About = () => {
                   NexServ Consulting was founded by senior data engineers with decades of hands-on experience fixing SQL Server performance issues, migrating legacy systems to Azure, and building reliable data pipelines that teams can trust.
                 </p>
                 <p>
-                  We’ve been in the trenches with messy databases, slow queries, broken ETL pipelines, and painful Excel workflows. We know exactly how to turn unstable systems into stable ones.
+                  We’ve been in the trenches with messy databases, slow queries, broken ETL pipelines, and painful Excel or MS Access workflows. We know exactly how to turn unstable systems into stable ones.
                 </p>
                 <p>
                   Today, we work with clients across industries, helping them migrate, optimize, and manage their data infrastructure with confidence.
