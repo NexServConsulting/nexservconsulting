@@ -293,7 +293,7 @@ const ServiceDetail = () => {
                       />
                     </a>
                     <a
-                      href="https://www.mitsuihomecanada.com"
+                      href="https://www.mitsuihomescanada.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="h-20 flex-shrink-0"
