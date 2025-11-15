@@ -271,6 +271,7 @@ const ServiceDetail = () => {
                     <img
                       src={rapidofixerLogo}
                       alt="Rapidofixer"
+                      href="https://www.rapidofixer.com"
                       className="h-20 w-auto grayscale object-contain flex-shrink-0 opacity-30"
                     />
                     <img
