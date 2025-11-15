@@ -55,7 +55,7 @@ const About = () => {
               <h2 className="text-3xl font-bold">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  NexServ Consulting was founded by senior data engineers with decades of hands-on experience fixing SQL Server performance issues, migrating legacy systems to Azure, and building reliable data pipelines that teams can trust.
+                  NexServ Consulting was founded by senior data engineers and database administrators with decades of hands-on experience fixing SQL Server performance issues, migrating legacy systems to Azure, and building reliable data pipelines that teams can trust.
                 </p>
                 <p>
                   We’ve been in the trenches with messy databases, slow queries, broken ETL pipelines, and painful Excel or MS Access workflows. We know exactly how to turn unstable systems into stable ones.
