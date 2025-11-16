@@ -86,7 +86,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-sm text-muted-foreground">BC, Canada</p>
+                      <p className="text-sm text-muted-foreground">Metro Vancouver, BC, Canada</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
