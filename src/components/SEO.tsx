@@ -25,7 +25,7 @@ const SEO = ({
 }: SEOProps) => {
   const siteUrl = window.location.origin;
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : window.location.href;
-  const fullTitle = `${title} | NexServ Consulting`;
+  const fullTitle = title || "NexServ Consulting | Data and design, in sync.";
 
   return (
     <Helmet>
