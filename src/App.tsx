@@ -13,28 +13,43 @@ import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 import ServiceDetail from "./pages/ServiceDetail";
 import Services from "./pages/Services";
+import { usePageViewTracking } from "./hooks/usePageViewTracking";
 
 const queryClient = new QueryClient();
+
+const AppRoutes = () => {
+  // Track page views on route change
+  usePageViewTracking();
+
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:serviceId" element={<ServiceDetail />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/sitemap.xml" element={<Sitemap />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Layout>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <HelmetProvider>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="nexserv-theme">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem={false}
+        storageKey="nexserv-theme"
+      >
         <TooltipProvider>
           <Toaster />
           <Sonner />
           <BrowserRouter>
-            <Layout>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/services/:serviceId" element={<ServiceDetail />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/sitemap.xml" element={<Sitemap />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Layout>
+            <AppRoutes />
           </BrowserRouter>
         </TooltipProvider>
       </ThemeProvider>
