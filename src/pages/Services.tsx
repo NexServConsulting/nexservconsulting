@@ -75,7 +75,7 @@ const Services = () => {
   return (
     <>
       <SEO
-        title="Our Services"
+        title="NexServ Consulting | Data and design, in sync."
         description="NexServ Consulting helps organizations modernize their data infrastructure and build fast, reliable web applications. We specialize in SQL Server optimization, data migration, Excel and MS Access modernization, and custom website development. Our solutions improve performance, reduce downtime, and keep data workflows stable as your business grows."
         keywords="data migration services, database optimization, Azure SQL solutions, SQL Server consulting, SSIS development, data conversion, Excel automation, MS Access database migration, web development, ETL services, cloud migration, database performance tuning"
         canonical="/services"

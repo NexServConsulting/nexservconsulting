@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Lightbulb, Award } from "lucide-react";
 import teamImage from "@/assets/about-team.jpg";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const values = [
@@ -27,7 +28,13 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <>
+      <SEO
+        title="NexServ Consulting | Data and design, in sync."
+        description="NexServ Consulting helps organizations modernize their data infrastructure and build fast, reliable web applications. We specialize in SQL Server optimization, data migration, Excel and MS Access modernization, and custom website development. Our solutions improve performance, reduce downtime, and keep data workflows stable as your business grows."
+        canonical="/about"
+      />
+      <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -130,6 +137,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

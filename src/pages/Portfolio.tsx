@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, ShoppingCart, Heart, Landmark, Globe } from "lucide-react";
 import portfolioImage from "@/assets/portfolio-migration.jpg";
+import SEO from "@/components/SEO";
 
 const Portfolio = () => {
   const projects = [
@@ -48,7 +49,13 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <>
+      <SEO
+        title="NexServ Consulting | Data and design, in sync."
+        description="NexServ Consulting helps organizations modernize their data infrastructure and build fast, reliable web applications. We specialize in SQL Server optimization, data migration, Excel and MS Access modernization, and custom website development. Our solutions improve performance, reduce downtime, and keep data workflows stable as your business grows."
+        canonical="/portfolio"
+      />
+      <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0">
@@ -161,6 +168,7 @@ const Portfolio = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
