@@ -209,7 +209,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SEO
         title="Data and design, in sync"
-        description="Recently founded by industry veterans with 20+ years of experience. Expert data migration, database optimization, and Azure SQL solutions. Transform your data infrastructure with NexServ Consulting's proven methodologies."
+        description="NexServ Consulting helps organizations modernize their data infrastructure and build fast, reliable web applications. We specialize in SQL Server optimization, data migration, Excel and MS Access modernization, and custom website development. Our solutions improve performance, reduce downtime, and keep data workflows stable as your business grows."
         keywords="data migration, database optimization, Azure SQL, SQL Server, SSIS, data conversion, cloud solutions, MS Access, Excel automation, web development"
         canonical="/"
       />
