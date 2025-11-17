@@ -74,7 +74,10 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                   className="text-base md:text-[0.844rem] lg:text-xl font-medium transition-colors hover:text-primary text-foreground/90"
                 >
                   {link.name}
@@ -111,7 +114,10 @@ const Navbar = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
                     className="text-xl font-medium transition-colors hover:text-primary text-foreground/90"
                   >
                     {link.name}
