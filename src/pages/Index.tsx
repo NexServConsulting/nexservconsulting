@@ -27,6 +27,7 @@ import {
   Phone,
   MapPin,
   CheckCircle,
+  Trainfront,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
