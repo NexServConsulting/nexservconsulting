@@ -173,32 +173,30 @@ const Index = () => {
     {
       icon: Building2,
       title: "Enterprise Data Migration",
-      client: "Fortune 500 Manufacturing Company",
-      description:
-        "Migrated 10+ years of legacy data from multiple MS Access databases to Azure SQL, improving query performance by 400%.",
-      technologies: ["MS Access", "Azure SQL", "SSIS", "PowerBI"],
+      client: "Manufacturing Company",
+      description: "Migrated 10+ years of legacy data from multiple Access databases to SQL Server 2019, improving query performance.",
+      technologies: ["MS Access", "SQL Server", "SSIS"],
     },
     {
-      icon: ShoppingCart,
-      title: "E-commerce Database Optimization",
-      client: "Leading Retail Chain",
-      description:
-        "Optimized SQL Server database handling 1M+ daily transactions, significantly reducing response times.",
+      icon: TrainFront,
+      title: "Transport Database Optimization",
+      client: "Train Transport",
+      description: "Optimized SQL Server database handling 1M+ daily transactions, significantly reducing response times.",
       technologies: ["SQL Server", "Index Optimization", "Query Tuning"],
     },
     {
       icon: Heart,
       title: "Healthcare Data Integration",
-      client: "Regional Hospital Network",
-      description: "Integrated patient data from 12 facilities into a centralized system with complete compliance.",
+      client: "Regional Healthcare",
+      description: "Integrated patient data from multiple facilities into a centralized system with complete compliance.",
       technologies: ["SQL Server", "SSIS", "Data Encryption"],
     },
     {
       icon: Landmark,
-      title: "Financial Data Warehouse",
-      client: "Investment Firm",
-      description: "Built comprehensive data warehouse for financial analytics with real-time capabilities.",
-      technologies: ["Azure SQL", "Data Warehouse", "SSAS"],
+      title: "Database Maintenance",
+      client: "Pension Administrator",
+      description: "Maintain Legacy systems running Visual Basic and SQL Server as backend, including web app running on SQL Server backend",
+      technologies: ["SQL Server", "Visual Basic", "C#"],
     },
   ];
 
