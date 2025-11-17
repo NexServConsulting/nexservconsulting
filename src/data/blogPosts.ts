@@ -18,7 +18,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "Best Practices for Database Migration to Azure SQL",
+    title: "Best Practices for Database Migration to SQL Server",
     excerpt: "Learn the essential strategies for a successful database migration to Azure SQL, including planning, testing, and optimization.",
     category: "Cloud Solutions",
     date: "2024-01-15",
