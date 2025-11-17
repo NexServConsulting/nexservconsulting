@@ -296,7 +296,7 @@ const Index = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-foreground">Our Story</h3>
               <p className="text-muted-foreground text-lg">
-                NexServ Consulting was founded by senior data engineers and database administrators with decades of hands-on experience fixing SQL
+                NexServ Consulting was founded by seasoned data engineers and database administrators with decades of hands-on experience fixing SQL
                 Server performance issues, migrating legacy systems to Azure, and building reliable data pipelines that
                 teams can trust.
               </p>
@@ -390,7 +390,7 @@ const Index = () => {
       >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-foreground">Our Portfolio</h2>
+            <h2 className="text-5xl font-bold mb-6 text-foreground">Our Work</h2>
             <p className="text-xl text-muted-foreground">
               Discover how we've helped businesses transform their data infrastructure.
             </p>
