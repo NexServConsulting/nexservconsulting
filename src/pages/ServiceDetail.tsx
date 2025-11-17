@@ -99,7 +99,7 @@ const ServiceDetail = () => {
   return (
     <>
       <SEO
-        title="NexServ Consulting | Data and design, in sync."
+        title="NexServConsulting.com: Data Management, SQL Server, & Web Development."
         description={generateDescription()}
         keywords={generateKeywords()}
         canonical={`/services/${serviceId}`}
