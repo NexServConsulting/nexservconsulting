@@ -41,7 +41,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen pt-20">
       <SEO 
-        title="NexServ Consulting | Data and design, in sync."
+        title="NexServConsulting.com: Data Management, SQL Server, & Web Development."
         description="NexServ Consulting helps organizations modernize their data infrastructure and build fast, reliable web applications. We specialize in SQL Server optimization, data migration, Excel and MS Access modernization, and custom website development. Our solutions improve performance, reduce downtime, and keep data workflows stable as your business grows."
         keywords="data migration tips, database optimization guide, Azure SQL best practices, SQL Server performance, cloud data solutions"
         canonical="/blog"
