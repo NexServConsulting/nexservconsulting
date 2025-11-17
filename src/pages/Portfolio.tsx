@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Building2, ShoppingCart, Heart, Landmark, Globe } from "lucide-react";
+import { Building2, TrainFront, Heart, Landmark, Globe } from "lucide-react";
 import portfolioImage from "@/assets/portfolio-migration.jpg";
 import SEO from "@/components/SEO";
 
@@ -9,15 +9,15 @@ const Portfolio = () => {
     {
       icon: Building2,
       title: "Enterprise Data Migration",
-      client: "Fortune 500 Manufacturing Company",
-      description: "Migrated 10+ years of legacy data from multiple Access databases to Azure SQL, improving query performance by 400%.",
-      technologies: ["MS Access", "Azure SQL", "SSIS", "PowerBI"],
-      results: ["Zero downtime migration", "400% performance improvement", "Reduced storage costs by 60%"],
+      client: "Manufacturing Company",
+      description: "Migrated 10+ years of legacy data from multiple Access databases to SQL Server 2019, improving query performance.",
+      technologies: ["MS Access", "SQL Server", "SSIS"],
+      results: ["Minimal downtime", "Performance improvement", "Reduced storage costs"],
     },
     {
-      icon: ShoppingCart,
-      title: "E-commerce Database Optimization",
-      client: "Leading Retail Chain",
+      icon: TrainFront,
+      title: "Transport Database Optimization",
+      client: "Train Transport",
       description: "Optimized SQL Server database handling 1M+ daily transactions, significantly reducing response times.",
       technologies: ["SQL Server", "Index Optimization", "Query Tuning"],
       results: ["50% faster queries", "Enhanced scalability", "Improved user experience"],
@@ -25,25 +25,25 @@ const Portfolio = () => {
     {
       icon: Heart,
       title: "Healthcare Data Integration",
-      client: "Regional Hospital Network",
-      description: "Integrated patient data from 12 facilities into a centralized system with complete compliance.",
+      client: "Regional Healthcare",
+      description: "Integrated patient data from multiple facilities into a centralized system with complete compliance.",
       technologies: ["SQL Server", "SSIS", "Data Encryption"],
       results: ["HIPAA compliant", "Real-time data access", "Streamlined operations"],
     },
     {
       icon: Landmark,
-      title: "Financial Data Warehouse",
-      client: "Investment Firm",
-      description: "Built comprehensive data warehouse for financial analytics and reporting with real-time capabilities.",
-      technologies: ["Azure SQL", "Data Warehouse", "SSAS"],
-      results: ["Real-time analytics", "Enhanced reporting", "Better decision making"],
+      title: "Database Maintenance",
+      client: "Pension Administrator",
+      description: "Maintain Legacy systems running Visual Basic and SQL Server as backend, including web app running on SQL Server backend",
+      technologies: ["SQL Server", "Visual Basic", "C#"],
+      results: ["Smooth operation", "Seamless user experience", "Optimum application performance"],
     },
     {
       icon: Globe,
       title: "Custom Web Application",
-      client: "Tech Startup",
+      client: "Repair Service",
       description: "Developed a full-stack web application with modern UI and seamless database integration.",
-      technologies: ["React", "TypeScript", "SQL Server", "REST API"],
+      technologies: ["React", "TypeScript", "PostgreSQL", "REST API"],
       results: ["Improved user engagement", "Scalable architecture", "Responsive design"],
     },
   ];
