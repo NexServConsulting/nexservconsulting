@@ -68,7 +68,7 @@ const Services = () => {
       icon: Globe,
       title: "Web Development",
       description: "Custom web applications built with modern technologies and best practices.",
-      features: ["Responsive design", "Full-stack development", "Performance optimization"],
+      features: ["Responsive design", "Full-stack development", "Modern responsive UI", "Database-driven functionality"],
     },
   ];
 
