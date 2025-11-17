@@ -51,7 +51,7 @@ const Portfolio = () => {
   return (
     <>
       <SEO
-        title="NexServ Consulting | Data and design, in sync."
+        title="NexServ Consulting | Data Management, SQL Server, & Web Development"
         description="NexServ Consulting helps organizations modernize their data infrastructure and build fast, reliable web applications. We specialize in SQL Server optimization, data migration, Excel and MS Access modernization, and custom website development. Our solutions improve performance, reduce downtime, and keep data workflows stable as your business grows."
         canonical="/portfolio"
       />
@@ -68,7 +68,7 @@ const Portfolio = () => {
         </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-5xl font-bold mb-6">Our Portfolio</h1>
+            <h1 className="text-5xl font-bold mb-6">Our Work</h1>
             <p className="text-xl text-muted-foreground">
               Discover how we've helped businesses transform their data infrastructure and achieve remarkable results.
             </p>
