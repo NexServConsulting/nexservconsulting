@@ -431,7 +431,7 @@ const Index = () => {
       >
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-foreground">Latest Insights</h2>
+            <h2 className="text-5xl font-bold mb-6 text-foreground">Blog</h2>
             <p className="text-xl text-muted-foreground">Tips and best practices from our data experts.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
