@@ -8,32 +8,79 @@
     <meta name="robots" content="index, follow" />
     <meta name="author" content="NexServ Consulting" />
 
-    <title>NexServConsulting.com: Data Engineering, SQL Server, Web Development.</title>
-    <meta name="description" content="Modernize data infrastructure and build fast, reliable web applications. We specialize in SQL Server, Excel and MS Access modernization, and custom website development."/>
-    <meta name="keywords" content="data migration, database optimization, Azure SQL, SQL Server, SSIS, data conversion, MS Access, Excel, NexServ Consulting" />
+    <title>NexServ Consulting | Data Management, SQL Server, & Web Development</title>
 
-    <!-- Open Graph / Facebook -->
+    <meta
+      name="description"
+      content="NexServ Consulting provides SQL Server performance tuning, data migration, Database Management, Excel and MS Access modernization, and modern web development. We fix slow databases, and build fast, reliable websites."
+    />
+
+    <meta
+      name="keywords"
+      content="SQL Server consultant, database optimization, data migration, Database Management, Excel and MS Access modernization, and web development"
+    />
+
+    <meta name="language" content="English" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="NexServ Consulting | Data Migration & Database Optimization Services" />
-    <meta property="og:description" content="Expert data management, migration, and optimization solutions. Specializing in SQL Server, SSIS, and Azure SQL for enterprise businesses."/>
     <meta property="og:site_name" content="NexServ Consulting" />
+    <meta property="og:title" content="NexServConsulting.com: Data Management, SQL Server, and Web Development" />
+    <meta
+      property="og:description"
+      content="SQL Server performance tuning, data migration, Database Management, Excel and MS Access modernization, and modern web development. We fix slow databases, and build fast, reliable websites."
+    />
+    <meta property="og:image" content="https://www.nexservconsulting.vercel.app/og-image.png" />
+    <meta property="og:url" content="https://www.nexservconsulting.vercel.app" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="NexServ Consulting | Data Migration & Database Optimization" />
-    <meta name="twitter:description" content="Expert data management, migration, and optimization solutions for enterprise businesses."/>
+    <meta name="twitter:title" content="NexServConsulting.com: Data Management, SQL Server, and Web Development" />
+    <meta
+      name="twitter:description"
+      content="SQL Server performance tuning, data migration, Database Management, Excel and MS Access modernization, and modern web development. We fix slow databases, and build fast, reliable websites."
+    />
+    <meta name="twitter:image" content="https://www.nexservconsulting.vercel.app/og-image.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "NexServ Consulting",
+        "url": "https://www.nexservconsulting.vercel.app",
+        "description": "SQL Server performance tuning, data migration, Database Management, Excel and MS Access modernization, and modern web development. We fix slow databases, and build fast, reliable websites.",
+        "serviceType": [
+          "SQL Server performance tuning",
+          "Database optimization",
+          "Data migration",
+          "Data conversion",
+          "Database Management",
+          "Excel modernization",
+          "MS Access modernization",
+          "Website development",
+        ],
+        "brand": {
+          "@type": "Brand",
+          "name": "NexServ Consulting"
+        }
+      }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6B2EG0QF9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-N6B2EG0QF9');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N6B2EG0QF9");
     </script>
-    
   </head>
-   
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
