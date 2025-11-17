@@ -33,7 +33,7 @@ const BlogPost = () => {
       <ArticleSchema
         title={post.title}
         description={post.excerpt}
-        author="Rex Dev"
+        author="NexServ"
         publishedDate={post.date}
         image={post.image}
         category={post.category}
