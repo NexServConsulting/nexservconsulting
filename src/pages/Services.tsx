@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server, ArrowRight, Globe, Wrench } from "lucide-react";
+import { Database, Cloud, RefreshCw, TrendingUp, FileSpreadsheet, Server, ArrowRight, Globe, Wrench, CloudLightning } from "lucide-react";
 import servicesImage from "@/assets/services-infrastructure.jpg";
 import SEO from "@/components/SEO";
 
@@ -28,7 +28,7 @@ const Services = () => {
     },
     {
       id: "database-optimization",
-      icon: TrendingUp,
+      icon: CloudLightning,
       title: "Database Optimization",
       description: "Enhance performance and efficiency of your database infrastructure.",
       features: ["Query optimization", "Index tuning", "Performance monitoring", "Scalability planning"],
