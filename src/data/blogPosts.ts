@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
   {
     title: "Best Practices for Database Migration to SQL Server",
     excerpt: "Learn the essential strategies for a successful database migration to Azure SQL, including planning, testing, and optimization.",
-    category: "Cloud Solutions",
+    category: "Database Migration",
     date: "2024-01-15",
     readTime: "8 min read",
     image: blogAzureMigration,
@@ -75,7 +75,7 @@ export const blogPosts: BlogPost[] = [
 
 export const categories = [
   "All Posts",
-  "Cloud Solutions",
+  "Database Migration",
   "Database Optimization",
   "Data Migration",
   "Development",
