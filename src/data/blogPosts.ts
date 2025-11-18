@@ -36,15 +36,6 @@ export const blogPosts: BlogPost[] = [
     slug: "sql-server-performance-optimization",
   },
   {
-    title: "SSIS Best Practices for ETL Development",
-    excerpt: "Master the art of building efficient ETL processes with SQL Server Integration Services.",
-    category: "Development",
-    date: "2023-12-28",
-    readTime: "15 min read",
-    image: blogSsisEtl,
-    slug: "ssis-etl-best-practices",
-  },
-  {
     title: "Modernizing Legacy Access Databases",
     excerpt: "A practical guide to migrating and modernizing Microsoft Access applications for the cloud era.",
     category: "Modernization",
@@ -52,15 +43,6 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     image: blogAccessModernization,
     slug: "modernizing-legacy-access-databases",
-  },
-  {
-    title: "Data Security in Cloud Migrations",
-    excerpt: "Essential security considerations when moving your data to the cloud, with focus on compliance and protection.",
-    category: "Security",
-    date: "2023-12-15",
-    readTime: "9 min read",
-    image: blogSecurityCloud,
-    slug: "data-security-cloud-migrations",
   },
 ];
 
