@@ -36,15 +36,6 @@ export const blogPosts: BlogPost[] = [
     slug: "sql-server-performance-optimization",
   },
   {
-    title: "Data Migration Strategies for Enterprise Systems",
-    excerpt: "Explore different approaches to enterprise data migration, including zero-downtime strategies and risk mitigation.",
-    category: "Data Migration",
-    date: "2024-01-05",
-    readTime: "10 min read",
-    image: blogDataMigration,
-    slug: "enterprise-data-migration-strategies",
-  },
-  {
     title: "SSIS Best Practices for ETL Development",
     excerpt: "Master the art of building efficient ETL processes with SQL Server Integration Services.",
     category: "Development",
