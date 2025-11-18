@@ -50,7 +50,6 @@ export const categories = [
   "All Posts",
   "Database Migration",
   "Database Optimization",
-  "Data Migration",
   "Development",
   "Modernization",
   "Security",
