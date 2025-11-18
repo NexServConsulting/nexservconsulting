@@ -131,7 +131,7 @@ const Blog = () => {
                         </div>
                       </div>
                     </div>
-                    <Button variant="ghost" className="mt-4 group/btn p-0 h-auto">
+                    <Button variant="ghost" className="mt-4 group/btn">
                       Read More
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     </Button>
